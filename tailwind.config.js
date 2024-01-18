@@ -74,12 +74,6 @@ module.exports = {
       },
       backgroundImage: {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
-        "vcd-hero-banner": "url('assets/banner-img/VCD-hero-banner.webp')",
-        "id-hero-banner": "url('assets/banner-img/ID-hero-banner.webp')",
-        "av-hero-banner": "url('assets/banner-img/AV-hero-banner.webp')",
-        "uiux-hero-banner": "url('assets/banner-img/UIUX-hero-banner.webp')",
-        "fd-hero-banner": "url('assets/banner-img/FD-hero-banner.webp')",
-        card: "linear-gradient(to right, transparent 20%, #A91D54 20%)",
       },
       backgroundColor: {
         "modal-dark-fade": "rgba(0, 0, 0, 0.4)",

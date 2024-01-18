@@ -3,32 +3,47 @@
 @tailwind utilities;
 
 
-.btn{
+.bg-grid-slate {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.03)'%3E%3Cpath d='M0 .5h31.5V32'/%3E%3C/svg%3E");
+}
+
+.card-scroll::-webkit-scrollbar {
+    @apply h-1 w-2;
+}
+
+.card-scroll::-webkit-scrollbar-track {
+    background: #8888882e;
+    border-radius: 5px;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #A91D54;
+}
+
+.btn {
     @apply flex h-fit w-fit px-4 py-2 rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;
 }
 
 .shimmer-effect {
     @apply bg-black text-white;
-    -webkit-mask: linear-gradient(120deg, #fff 35%, #a91d5592, #a91d54 45%)
-      right/250% 100%;
+    -webkit-mask: linear-gradient(120deg, #fff 35%, #a91d5592, #a91d54 45%) right/250% 100%;
     animation: shimmer1 2.5s infinite;
-  }
-  
-  @keyframes shimmer1 {
+}
+
+@keyframes shimmer1 {
     100% {
-      -webkit-mask-position: left;
+        -webkit-mask-position: left;
     }
-  }
-  
-  .shimmer-effect1 {
-    -webkit-mask: linear-gradient(120deg, #fff 35%, #a91d5592, #a91d54 45%)
-      right/250% 100%;
+}
+
+.shimmer-effect1 {
+    -webkit-mask: linear-gradient(120deg, #fff 35%, #a91d5592, #a91d54 45%) right/250% 100%;
     animation: shimmer2 2.5s infinite;
-  }
-  
-  @keyframes shimmer2 {
+}
+
+@keyframes shimmer2 {
     100% {
-      -webkit-mask-position: left;
+        -webkit-mask-position: left;
     }
-  }
-  
+}
