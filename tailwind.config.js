@@ -24,12 +24,12 @@ module.exports = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+      "3xl": "1636px",
     },
     colors: {
       "brand-red": "#A91D54",
-      "brand-gray": "#F3F3F3",
-      "brand-light-gray": "#fbfbff",
-      "brand-light-pink": "#fff1f1",
+      "brand-yellow" : "#FED800",
+      "brand-lisa" : "#9333EA",
       transparent: "transparent",
       current: "currentColor",
       black: colors.black,
@@ -54,8 +54,15 @@ module.exports = {
       rose: colors.rose,
     },
     extend: {
+      
       height: {
         13: "50px",
+        300: "300px",
+        360: "360px",
+        400: "400px",
+        425: "425px",
+        450: "450px",
+        500: "500px"
       },
       aspectRatio: {
         "16/9": "960 / 540",
@@ -71,9 +78,14 @@ module.exports = {
       },
       fontFamily: {
         "EB-Garamond": ["EB Garamond", "serif"],
+        "caveat": ["Caveat", "cursive"],
       },
       backgroundImage: {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
+        "text": "url('assets/banner-img/text-bg.png')",
+        "linear-graph": "url('assets/banner-img/linear-graph.webp')",
+        "lisa": "url('assets/banner-img/lisa image.webp')",
+        "footer-banner": "url('assets/banner-img/footer-banner.webp')",
       },
       backgroundColor: {
         "modal-dark-fade": "rgba(0, 0, 0, 0.4)",
