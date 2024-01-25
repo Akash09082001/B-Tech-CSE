@@ -110,3 +110,20 @@
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(254,216,0,0.9906556372549019) 59%, rgba(254,216,0,1) 95%);
 }
+.box-gradient2 {
+    background: rgb(0,0,0);
+background: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(169,29,84,1) 51%, rgba(169,29,84,1) 95%);
+}
+
+.add-box::before{
+    content: '';
+}
+
+.faq-details[open] summary span svg {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+.faq-details summary span svg {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+}

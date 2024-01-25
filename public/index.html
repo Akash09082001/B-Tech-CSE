@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="bg-grid-slate">
+<body class="bg-grid-slate card-scroll">
 
     <header class="flex w-full fixed z-30 bg-white shadow-md">
 
@@ -29,12 +29,12 @@
                 </div>
             </div>
             <div class="flex w-fit">
-                <div class="hidden w-fit">
-                    <button class="btn">
+                <div class="hidden md:flex w-fit">
+                    <button onclick="applyNow()" class="btn">
                         Apply Now
                     </button>
                 </div>
-                <div class="flex w-fit">
+                <!-- <div class="flex w-fit">
                     <button class="flex w-fit h-fit p-2 font-bold rounded-md my-auto hover:text-brand-red">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd"
@@ -42,13 +42,20 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
 
     </header>
 
-    <main class="flex w-full flex-col pt-16">
+    <main class="flex w-full flex-col pt-16 ">
+
+        <div class="flex w-full fixed bottom-0 z-30 bg-white">
+            <button onclick="applyNow()"
+                class="flex w-full bg-brand-red py-4 text-base text-white text-center items-center justify-center shimmer-effect1">
+                Apply Now
+            </button>
+        </div>
 
         <section id="Hero" class="flex w-full">
             <div class="flex flex-col w-full md:py-5 lg:py-8 ">
@@ -56,7 +63,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 w-full max-w-7xl mx-auto">
                     <div class="flex w-full md:order-2 ">
                         <div class="flex w-fit h-fit my-auto md:rounded-md">
-                            <video id="myVideo" class=" flex h-fit w-full md:w-fit md:rounded-md" autoplay muted loop playsinline>
+                            <video id="myVideo" class=" flex h-fit w-full md:w-fit md:rounded-md" autoplay muted loop
+                                playsinline>
                                 <source src="assets/video/herovideo.mp4" type="video/mp4" />
                             </video>
                         </div>
@@ -64,7 +72,8 @@
                     <div class="flex flex-col gap-3 md:gap-4 lg:gap-5 w-full px-5 md:px-0 md:order-1">
                         <div class="flex flex-col w-full">
                             <span class="text-base sm:text-lg md:text-xl font-medium lg:font-bold">This is what</span>
-                            <h1 class="flex font-extrabold gap-1 flex-col text-4xl md:text-4xl+ lg:text-6xl w-full">
+                            <h1
+                                class="flex font-extrabold gap-1 flex-col text-4xl md:text-4xl+ lg:text-6xl w-full shimmer-effect1">
                                 <span>India’s best</span>
                                 <span class="gap-2 flex w-full items-end">
                                     <span class="bg-brand-red text-white font-extrabold w-fit px-1 rounded-md">B.Tech
@@ -121,7 +130,7 @@
                             </ul>
                         </div>
                         <div class="flex w-full gap-3">
-                            <button class="flex w-fit bg-brand-red text-white px-5 py-2 rounded-md ">Enquire
+                            <button onclick="openModal()" class="btn">Enquire
                                 Now</button>
                             <a href="" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
@@ -157,6 +166,61 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="modal"
+            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
+            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
+
+                <div
+                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
+                    <div class="flex w-full py-2">
+                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
+                            Enquire Now</h2>
+                    </div>
+                    <div class="flex w-fit absolute  top-0  right-0">
+                        <button onclick="closeModal()" class="px-2 py-2 rounded-md bg-white flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-brand-red ">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
+                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modal1"
+            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
+            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
+                <div
+                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
+                    <div class="flex w-full py-2">
+                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
+                            Enter details to get brochure</h2>
+                    </div>
+                    <div class="flex w-fit absolute  top-0  right-0">
+                        <button onclick="closeModal1()" class="px-2 py-2 rounded-md bg-white flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-brand-red ">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
+                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -198,369 +262,6 @@
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <section id="Board-of-advisor" class="flex w-full">
-            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5  md:gap-8 lg:gap-10 py-5">
-                <div class="flex w-full">
-                    <h2
-                        class="flex text-xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
-                        BOARD OF ADVISORS
-                    </h2>
-                </div>
-                <div class="flex flex-col w-full  py-8 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div>
-                        <div class="grid grid-cols-1">
-                            <div>
-                                <video autoplay="" loop="" muted="" controls="">
-                                    <source
-                                        src="https://isu.ac.in/B-Tech-CSE/images/Engineering%20Edu%20Premiere%20Edit%20File%20(1).mp4"
-                                        type="video/mp4">
-                                    <source src="movie.ogg" type="video/ogg">
-                                </video>
-                            </div>
-                            <div class="flex w-full px-5 py-5">
-                                <div class="flex w-full overflow-x-scroll card-scroll py-3">
-                                    <div class="flex w-auto justify-start gap-4">
-    
-                                        <div class="flex flex-col w-52 rounded-2xl">
-                                            <img src="assets/Board-of-advisor/Frame 56.png" alt="" srcset=""
-                                                class="flex w-full h-full object-cover rounded-2xl">
-                                            <div class="flex flex-col items-center justify-center gap-3">
-                                                <h2 class="text-sm text-brand-red font-bold py-2">ASIM MALIK</h2>
-                                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
-                                                <div class="flex h-12 w-fit mx-auto">
-                                                    <img src="assets/Board-of-advisor/logo1.png" class="flex h-full w-full object-contain" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col w-52 rounded-2xl">
-                                            <img src="assets/Board-of-advisor/Frame 56.png" alt="" srcset=""
-                                                class="flex w-full h-full object-cover rounded-2xl">
-                                            <div class="flex flex-col items-center justify-center gap-3">
-                                                <h2 class="text-sm text-brand-red font-bold py-2">ASIM MALIK</h2>
-                                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
-                                                <div class="flex h-12 w-fit mx-auto">
-                                                    <img src="assets/Board-of-advisor/logo1.png" class="flex h-full w-full object-contain" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col w-52 rounded-2xl">
-                                            <img src="assets/Board-of-advisor/Frame 56.png" alt="" srcset=""
-                                                class="flex w-full h-full object-cover rounded-2xl">
-                                            <div class="flex flex-col items-center justify-center gap-3">
-                                                <h2 class="text-sm text-brand-red font-bold py-2">ASIM MALIK</h2>
-                                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
-                                                <div class="flex h-12 w-fit mx-auto">
-                                                    <img src="assets/Board-of-advisor/logo1.png" class="flex h-full w-full object-contain" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col w-52 rounded-2xl">
-                                            <img src="assets/Board-of-advisor/Frame 56.png" alt="" srcset=""
-                                                class="flex w-full h-full object-cover rounded-2xl">
-                                            <div class="flex flex-col items-center justify-center gap-3">
-                                                <h2 class="text-sm text-brand-red font-bold py-2">ASIM MALIK</h2>
-                                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
-                                                <div class="flex h-12 w-fit mx-auto">
-                                                    <img src="assets/Board-of-advisor/logo1.png" class="flex h-full w-full object-contain" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Life-at-campus" class="flex w-full bg-black">
-            <div class="flex flex-col w-full px-5 max-w-7xl mx-auto  md:gap-8 lg:gap-10 py-5 mt-10">
-
-                <div class="flex flex-col items-center w-full gap-10">
-                    <h2
-                        class="flex text-white text-xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
-                        LIFE AT CAMPUS
-                    </h2>
-                    <h2 class="text-white ">INDUSTRY TALKS</h2>
-                </div>
-
-                <div class="flex w-full overflow-x-scroll card-scroll py-5">
-                    <div class="flex w-auto justify-start gap-3">
-
-                        <div class="flex border border-gray-300 w-72 h-[519px] bg-[#FED800]">
-                            <h2 class="text-lg font-bold px-5 py-5">PRASHANTH KUMAR</h2>
-                        </div>
-                        <div class="flex border border-gray-300 w-72 h-[519px] bg-[#FED800]">
-                            <h2 class="text-lg font-bold px-5 py-5">PRASHANTH KUMAR</h2>
-                        </div>
-                        <div class="flex border border-gray-300 w-72 h-[519px] bg-[#FED800]">
-                            <h2 class="text-lg font-bold px-5 py-5">PRASHANTH KUMAR</h2>
-                        </div>
-                        <div class="flex border border-gray-300 w-72 h-[519px] bg-[#FED800]">
-                            <h2 class="text-lg font-bold px-5 py-5">PRASHANTH KUMAR</h2>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="flex w-full pt-16">
-                    <div class="flex flex-col gap-4 w-full items-center justify-center">
-                        <h1 class="text-white font-bold">1:1 MENTORSHIP</h1>
-                        <p class="text-white text-center text-sm">
-                            < Our students have exclusive access to exciting Meetups, Hackathons, & Tech Events in
-                                Mumbai>
-                                </Our>
-                        </p>
-                    </div>
-                </div>
-                <div class="flex flex-col w-full  py-5 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div>
-                        <div class="grid grid-cols-1">
-                            <hr class="border border-brand-red mb-6">
-                            <div>
-                                <img src="assets/global-immersion-img/image 492.png" alt="">
-                            </div>
-                            <hr class="border border-brand-red mt-6">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Lisa" class="flex w-full bg-black">
-            <div class="flex flex-col w-full max-w-7xl mx-auto  md:gap-8 lg:gap-10 py-5">
-                <div class="flex w-full">
-                    <div class="flex w-full items-center justify-center">
-                        <h1 class="text-white font-bold">LISA</h1>
-                    </div>
-                </div>
-                <div class="flex flex-col w-full  py-5 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div>
-                        <div class="grid grid-cols-1">
-                            <hr class="border border-[#9333ea] mb-6">
-                            <div>
-                                <img src="assets/global-immersion-img/image 491.png" alt="">
-                            </div>
-                            <hr class="border border-[#9333ea] mt-6">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Events" class="flex w-full bg-black">
-            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5  md:gap-8 lg:gap-10 py-5">
-                <div class="flex w-full items-center justify-center">
-                    <h1 class="text-white font-bold">EVENTS</h1>
-                </div>
-                <div class="flex flex-col w-full  py-8 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div class="flex w-full overflow-x-scroll pb-3 card-scroll ">
-                        <div class=" flex w-fit items-center justify-center mx-auto">
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red rounded-tl-md">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/campus-img- (5).webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/campus-img- (5).webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/campus-img- (6).webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/campus-img- (6).webp" />
-                                </div>
-                                <div class="w-full h-2/3 p-1 border border-brand-red rounded-bl-md">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/campus-img- (7).webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/campus-img- (7).webp" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-full h-2/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/campus-img- (8).webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/campus-img- (8).webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/campus-img- (9).webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/campus-img- (9).webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-13.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-13.webp" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-15.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-15.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-17.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-17.webp" />
-                                </div>
-                                <div class="w-full h-2/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-9.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-9.webp" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-full h-2/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-3.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-3.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Career-counselling.jpg')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Career-counselling.jpg" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Optometry-1.jpg')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Optometry-1.jpg" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-20.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-20.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-19.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-19.webp" />
-                                </div>
-                                <div class="w-full h-2/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Campus-life-18.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Campus-life-18.webp" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-full h-2/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/placement-4.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/placement-4.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Seminar-about-Cruise-Ship-Jobs-and-Crew-life-1.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Seminar-about-Cruise-Ship-Jobs-and-Crew-life-1.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/Paramedical-Seminar.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/Paramedical-Seminar.webp" />
-                                </div>
-                            </div>
-                            <div class="flex w-80 h-80 flex-wrap">
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/placement-1.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/placement-1.webp" />
-                                </div>
-                                <div class="w-1/2 h-1/3 p-1 border border-brand-red rounded-tr-md">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/placement-2.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/placement-2.webp" />
-                                </div>
-                                <div class="w-full h-2/3 p-1 border border-brand-red rounded-br-md">
-                                    <img alt="gallery"
-                                        onclick="showImage('https://www.itm.edu/assets/gallery-img/placement-3.webp')"
-                                        class="flex h-full w-full rounded-lg object-cover object-center"
-                                        src="https://www.itm.edu/assets/gallery-img/placement-3.webp" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="global-immersion" class="flex w-full bg-black">
-            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5  md:gap-8 lg:gap-10 py-5">
-                <div class="flex w-full">
-                    <h2
-                        class="flex text-white text-xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
-                        GLOBAL IMMERSION PROGRAM
-                    </h2>
-                </div>
-                <div class="flex flex-col w-full  py-8 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div>
-                        <div class="grid grid-cols-1">
-                            <hr class="border border-brand-red mb-4">
-                            <div>
-                                <img src="assets/global-immersion-img/Frame 67.png" alt="">
-                            </div>
-                            <!-- <hr class="border border-red-800"> -->
-                            <div class="flex items-center justify-center w-full mt-4 border-t-2 border-brand-red">
-                                <div class="flex items-center justify-center flex-col gap-5 w-1/2">
-                                    <p class="text-white text-sm text-center px-2">Innovative and Comprehensive Program
-                                        with Tech, Business, and Soft Skills.</p>
-                                    <button class="btn">
-                                        ENQUIRE NOW
-                                    </button>
-                                </div>
-                                <div class="flex w-1/2">
-                                    <img src="assets/global-immersion-img/paichat 1.png" alt="">
-                                </div>
-                            </div>
-                            <hr class="border border-brand-red mt-4">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="SCHOLARSHIPS" class="flex w-full bg-black">
-            <div class="flex flex-col w-full max-w-7xl mx-auto  md:gap-8 lg:gap-10 py-5">
-                <div class="flex w-full">
-                    <h2
-                        class="flex text-white text-xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
-                        SCHOLARSHIPS
-                    </h2>
-                </div>
-                <div class="flex flex-col w-full  py-8 md:py-10 lg:py-12 gap-5 lg:gap-7 xl:gap-10 max-w-7xl mx-auto">
-                    <div>
-                        <div class="grid grid-cols-1">
-                            <hr class="border border-brand-red mb-4">
-                            <div>
-                                <img src="assets/global-immersion-img/image 492.png" alt="">
-                            </div>
-                            <hr class="border border-brand-red mt-4">
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1237,6 +938,627 @@
             </div>
         </section>
 
+        <section id="Specialization" class="flex w-full">
+            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10">
+
+                <div class="flex w-full">
+                    <h2
+                        class="flex flex-col md:flex-row text-2xl gap-2 md:gap-5 md:text-3xl font-bold items-center justify-center w-full ">
+                        <span>Traditional Engineering</span>
+                        <span class="flex text-brand-red italic font-serif">VS</span>
+                        <div class="flex md:flex-col gap-2 md:gap-5 w-fit mx-auto md:mx-0 items-center justify-center">
+                            <div class="flex w-full h-16">
+                                <img src="assets/banner-img/School-of-Future-Tech.webp" alt="School-of-Future-Tech"
+                                    class="flex w-full h-full object-contain">
+                            </div>
+                            <span>By</span>
+                            <div class="flex w-full h-16">
+                                <img src="assets/logo/ISU-LOGO.webp" alt="School-of-Future-Tech"
+                                    class="flex w-full h-full object-contain">
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+
+                <div class="flex lg:hidden w-full">
+                    <table class="flex flex-col w-full border border-gray-300 rounded-md ">
+                        <thead class="w-full ">
+                            <tr class="flex w-full">
+                                <th class="flex w-2/5 py-2 text-sm border-r border-gray-300 items-center">
+                                    Traditional Engineering
+                                </th>
+                                <th class="flex w-3/5 py-2">
+                                    <div class="flex h-14 w-full">
+                                        <img src="assets/banner-img/School-of-Future-Tech.webp" alt="">
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="w-full">
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-brand-red flex w-full px-5 py-2 text-white">ACADEMICS</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Curriculum</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Outdated</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">CO-created by Unicorn founders,
+                                        CEOs,CTOs,VPs & Engineering for Real world</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Instructors</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">No Industry
+                                        Experience</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Industry Leaders & Working in Top Tech
+                                        Companies</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Assignments</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Theoritical Written
+                                        Papers</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Industry Leaders & Working in Top Tech
+                                        Companies</span>
+                                </td>
+                            </tr>
+
+
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-brand-red flex w-full px-5 py-2 text-white">SKILLS
+                                        DEVELOPMENT</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Technical Skills</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Outdated Curriculum </span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">New age curriculum for 2028 and
+                                        beyond</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Soft skills</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">1 outdated Subject</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Every Semester includes 100hrs dedicated
+                                        to soft skills program</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Entrepreneurship</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Maybe 1-2 seminars</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">A 60-hour credit with a pitch to VCs as
+                                        the final step to get seed-fund from 1Cr Seed-fund Dedicated from ITM</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Business skills</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Nothing to talk
+                                        about</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Become Future Leaders by Learning the
+                                        tips and tricks of Business from Sales to HR </span>
+                                </td>
+                            </tr>
+
+
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-brand-red flex w-full px-5 py-2 text-white">SUPPORT FRAMEWORK</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Mentorship</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">No dedicated
+                                        guidance</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Monthly 1:1 Sessions</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Student Support</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Generic Support</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Allocated to Every Learner</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Mental & Physical
+                                        Being</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">No Support</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Dedicated Center for wellness</span>
+                                </td>
+                            </tr>
+
+
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-brand-red flex w-full px-5 py-2 text-white">CAREER & JOB
+                                        PREPARATION</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Internship</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Internships aren’t
+                                        supported</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">One year paid intership is a must</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Employability</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Has to undergo extra
+                                        training</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Ready to work at Top Tech
+                                        Companies</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Job Role</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">Junior SDE</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">Senior SDE / Startup Founder</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-full">
+                                    <span class="bg-black flex w-full px-5 py-1 text-white">Placement Bootcamps</span>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full">
+                                <td class="flex w-2/5 border-r border-gray-300">
+                                    <span class="flex w-full text-xs items-center px-5 py-1">No dedicated track</span>
+                                </td>
+                                <td class="flex w-3/5">
+                                    <span class="flex w-full text-xs px-2 py-1">350+Hours of dedicated Revision and
+                                        Interview Prep</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="hidden lg:flex w-full">
+                    <div class="flex flex-col gap-2 w-full">
+
+                        <div class="flex w-full items-center">
+                            <div class="flex w-1/5">
+                                <div class="flex w-full h-fit my-auto p-1 box-gradient rounded-md">
+                                    <span class="flex rounded-md w-full py-1 px-2 bg-white">
+                                        ACADEMICS
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex w-4/5 ">
+                                <div class="flex flex-col bg-white gap-2 w-2/5">
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Curriculum</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Instructors</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Assignments</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border-2 border-gray-300 rounded-md w-2/5 divide-y">
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Outdated</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">No Industry Experience</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Theoritical Written Papers</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border border-brand-red rounded-md w-full justify-between divide-y col-span-2">
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">CO-created by Unicorn founders,
+                                            CEOs,CTOs,VPs & Engineering for Real world</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Industry Leaders & Working in Top
+                                            Tech Companies</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Coding 40+ Apps and
+                                            Products</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center">
+                            <div class="flex w-1/5">
+                                <div class="flex w-full h-fit my-auto p-1 box-gradient rounded-md">
+                                    <span class="flex rounded-md w-full py-1 px-2 bg-white">
+                                        SKILLS DEVELOPMENT
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex w-4/5 ">
+                                <div class="flex flex-col bg-white gap-2 w-2/5">
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Technical
+                                            Skills</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Soft
+                                            skills</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Entrepreneurship</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Business
+                                            skills</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border-2 border-gray-300 rounded-md w-2/5 divide-y">
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Outdated Curriculum </span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">1 outdated Subject</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Maybe 1-2 seminars</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Nothing to talk about</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border border-brand-red rounded-md w-full justify-between divide-y col-span-2">
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">New age curriculum for 2028 and
+                                            beyond</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Every Semester includes 100hrs
+                                            dedicated to soft skills program</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">A 60-hour credit with a pitch to
+                                            VCs as the final step to get seed-fund from 1Cr Seed-fund Dedicated from
+                                            ITM</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Become Future Leaders by Learning
+                                            the tips and tricks of Business from Sales to HR </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center">
+                            <div class="flex w-1/5">
+                                <div class="flex w-full h-fit my-auto p-1 box-gradient rounded-md">
+                                    <span class="flex rounded-md w-full py-1 px-2 bg-white">
+                                        SUPPORT FRAMEWORK
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex w-4/5 ">
+                                <div class="flex flex-col bg-white gap-2 w-2/5">
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Mentorship</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Student
+                                            Support</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Mental &
+                                            Physical Being</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border-2 border-gray-300 rounded-md w-2/5 divide-y">
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">No dedicated guidance</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Generic Support</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">No Support</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border border-brand-red rounded-md w-full justify-between divide-y col-span-2">
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Monthly 1:1 Sessions</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Allocated to Every Learner</span>
+                                    </div>
+                                    <div class="flex w-full h-1/3 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Dedicated Center for
+                                            wellness</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-full items-center">
+                            <div class="flex w-1/5">
+                                <div class="flex w-full h-fit my-auto p-1 box-gradient rounded-md">
+                                    <span class="flex rounded-md w-full py-1 px-2 bg-white">
+                                        CAREER & JOB PREPARATION
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex w-4/5 ">
+                                <div class="flex flex-col bg-white gap-2 w-2/5">
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Internship</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span
+                                            class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Employability</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Job
+                                            Role</span>
+                                    </div>
+                                    <div class="flex w-full">
+                                        <span class="flex w-full bg-brand-red text-white px-3 py-2 rounded-md">Placement
+                                            Bootcamps</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border-2 border-gray-300 rounded-md w-2/5 divide-y">
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Internships aren’t
+                                            supported</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Has to undergo extra
+                                            training</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Junior SDE</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">No dedicated track</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col bg-white text-sm border border-brand-red rounded-md w-full justify-between divide-y col-span-2">
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">One year paid intership is a
+                                            must</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Ready to work at Top Tech
+                                            Companies</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">Senior SDE / Startup
+                                            Founder</span>
+                                    </div>
+                                    <div class="flex w-full h-1/4 items-center">
+                                        <span class="flex w-full px-3 py-2 rounded-md">350+Hours of dedicated Revision
+                                            and Interview Prep</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full overflow-hidden flex bg-black">
+            <div class="newsletter-container">
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+            </div>
+        </section>
+
         <section id="Future"
             class="flex w-full h-screen max-h-screen lg:max-h-[900px] bg-text bg-[length:auto_40%] bg-black bg-center bg-fixed">
             <div class="flex w-full h-full max-w-7xl mx-auto">
@@ -1784,14 +2106,1558 @@
 
         </section>
 
+        <section id="BOARD OF ADVISORS" class="flex w-full">
+            <div
+                class="flex flex-col w-full max-w-7xl mx-auto gap-5 md:gap-8 lg:gap-10 md:px-5 py-5 md:py-8 lg:py-10 xl:py-14">
+
+                <div class="flex w-full">
+                    <h2
+                        class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                        BOARD OF ADVISORS
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-5">
+                    <div class="flex w-full ">
+                        <div class="flex w-fit h-fit my-auto md:rounded-md">
+                            <video id="myVideo" class=" flex h-fit w-full md:w-fit md:rounded-md" autoplay controls
+                                muted loop playsinline>
+                                <source src="assets/video/Engineering Edu Premiere.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                    <div class="flex w-full px-5">
+
+                        <ul class="flex flex-col gap-5 w-full">
+                            <li class="grid grid-cols-4 w-full">
+                                <div class="flex box-gradient rounded-2xl p-1 col-span-3 w-full">
+                                    <div class="flex w-full bg-white rounded-2xl p-5 items-center">
+                                        <p class="flex text-xs text-center">These industry leaders employ more than
+                                            5000+ engineers in India and Abroad</p>
+                                    </div>
+                                </div>
+                                <div class="flex w-full">
+                                    <strong
+                                        class="flex text-brand-yellow text-8xl items-center justify-center w-full">1</strong>
+                                </div>
+                            </li>
+                            <li class="grid grid-cols-4 w-full">
+                                <div class="flex box-gradient rounded-2xl p-1 col-span-3 w-full">
+                                    <div class="flex w-full bg-white rounded-2xl p-5 items-center">
+                                        <p class="flex text-xs text-center">Program created by Unicorn Founders, CEO's,
+                                            CTOs, VPs and Engineering Directors</p>
+                                    </div>
+                                </div>
+                                <div class="flex w-full">
+                                    <strong
+                                        class="flex text-brand-yellow text-8xl items-center justify-center w-full">2</strong>
+                                </div>
+                            </li>
+                            <li class="grid grid-cols-4 w-full">
+                                <div class="flex box-gradient rounded-2xl p-1 col-span-3 w-full">
+                                    <div class="flex w-full bg-white rounded-2xl p-5 items-center">
+                                        <p class="flex text-xs text-center">Meet them in person in your classroom
+                                            understand what is required to be Top notch Developer</p>
+                                    </div>
+                                </div>
+                                <div class="flex w-full">
+                                    <strong
+                                        class="flex text-brand-yellow text-8xl items-center justify-center w-full">3</strong>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="flex w-full overflow-x-scroll px-5 md:px-0 py-3 card-scroll">
+                    <div class="flex w-auto gap-3 justify-start">
+
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Asim Malik.webp" alt="Asim Malik" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">ASIM MALIK</strong>
+                                <p class="text-xs">The Board of Advisors</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Asim-Malik.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Abhjit Petkar.webp" alt="Abhjit Petkar" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">ABHIJIT PETKAR</strong>
+                                <p class="text-xs">CTO</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Abhjit-Petkar.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Ajay Maru.webp" alt="Ajay Maru" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">AJAY MARU</strong>
+                                <p class="text-xs">CTO</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Ajay-Maru.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Ankush Gorav.webp" alt="Ankush Gorav" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">ANKUSH GORAV</strong>
+                                <p class="text-xs">VP of Engineering</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Ankush-Gorav.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Anshuman Bhaduri.webp" alt="Anshuman Bhaduri"
+                                    srcset="" class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">ANSHUMAN BHADURI</strong>
+                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Anshuman-Bhaduri.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Faiz Malkani.webp" alt="Faiz Malkani" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">FAIZ MALKANI</strong>
+                                <p class="text-xs">Founding Organizerk</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Faiz-Malkani.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Mukesh Marfatia.webp" alt="Mukesh Marfatia" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">MUKESH MARFATIA</strong>
+                                <p class="text-xs">EVP Corporate Strategy</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Mukesh-Marfatia.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Shailendra Sawant.webp" alt="Shailendra Sawant"
+                                    srcset="" class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">SHAILENDRA SAWANT</strong>
+                                <p class="text-xs">CTO
+                                </p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Shailendra-Sawant.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Varun Raj.webp" alt="Varun Raj" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">VARUN RAJ</strong>
+                                <p class="text-xs">Google Developer Expert</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Varun-Raj.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Vishal Dubey.webp" alt="Vishal Dubey" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">VISHAL DUBEY</strong>
+                                <p class="text-xs">Chief Technology Evangelist</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Vishal-Dubey.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52  rounded-2xl">
+                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
+                                <img src="assets/Board-of-advisor/Vivek Yadav.webp" alt="Vivek Yadav" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 py-3">
+                                <strong class="text-base text-brand-red font-bold py-2">VIVEK YADAV</strong>
+                                <p class="text-xs">Google Developer Expert</p>
+                                <div class="flex h-12 w-fit mx-auto">
+                                    <img src="assets/Board-of-advisor/company-logo/Vivek-yadav.webp"
+                                        class="flex h-full w-fit object-center object-contain" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="w-full overflow-hidden flex bg-black">
+            <div class="newsletter-container">
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="LIFE AT CAMPUS" class="flex w-full bg-black">
+            <div class="flex flex-col w-full gap-5 md:gap-8 lg:gap-10 py-5 md:py-10 lg:py-14 xl:py-16">
+
+                <div class="flex w-full max-w-7xl mx-auto">
+                    <h2
+                        class="flex text-white text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                        LIFE AT CAMPUS
+                    </h2>
+                </div>
+
+                <div class="flex w-full gap-5 flex-col max-w-7xl mx-auto">
+
+                    <div class="flex w-full items-center justify-center md:justify-start">
+                        <strong class="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl text-gray-300 w-fit flex">
+                            INDUSTRY TALKS
+                        </strong>
+                    </div>
+                    <div class="flex w-full overflow-x-scroll py-3 card-scroll">
+
+                        <div class="flex w-auto justify-start">
+
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            PRASHANTH KUMAR
+                                        </strong>
+                                        <span class="text-sm">Director IT</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/volvo.webp" alt="volvo" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/PRASHANTH KUMAR.webp" alt="PRASHANTH KUMAR"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            VAIBHAV LOKHANDE
+                                        </strong>
+                                        <span class="text-sm">Director of Technology</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/ey.webp" alt="ey" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/VAIBHAV LOKHANDE.webp" alt="VAIBHAV LOKHANDE"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            JAI DAGA
+                                        </strong>
+                                        <span class="text-sm">VP Technology</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/sony.webp" alt="sony" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/JAI DAGA.webp" alt="JAI DAGA"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            MADHAV MARRIPATI
+                                        </strong>
+                                        <span class="text-sm">Head of Ul UX</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/hcl.webp" alt="hcl" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/MADHAV MARRIPATI.webp" alt="MADHAV MARRIPATI"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            ALI MUSTAFA
+                                        </strong>
+                                        <span class="text-sm">Senior Developer Advocate</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/postman.webp" alt="postman" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/ALI MUSTAFA.webp" alt="ALI MUSTAFA"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            MANIKNATH EPARI
+                                        </strong>
+                                        <span class="text-sm">Ex. Product Owner</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/adidas.webp" alt="adidas" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/MANIKNATH EPARI.webp" alt="MANIKNATH EPARI"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            KESHAV KARUNKAR
+                                        </strong>
+                                        <span class="text-sm">Co Founder & VP Engineering</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/pathpartner.webp" alt="pathpartner" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/KESHAV KARUNKAR.webp" alt="KESHAV KARUNKAR"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex relative w-72">
+                                <div class="flex w-7"></div>
+                                <div class="flex w-60 h-450 p-5 bg-brand-yellow">
+                                    <div class="flex flex-col w-full h-fit">
+                                        <strong class="text-base">
+                                            ANAND DAGA
+                                        </strong>
+                                        <span class="text-sm">Partner/ Investment Banking</span>
+                                        <div class="flex w-full h-5">
+                                            <img src="assets/industry-talks/logo/intellecap.webp" alt="intellecap" class="flex h-full object-contain">
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 flex w-full h-360 ">
+                                        <img src="assets/industry-talks/ANAND DAGA.webp" alt="ANAND DAGA"
+                                            class="flex w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="flex w-full gap-5 flex-col md:h-screen md:max-h-[720px] max-w-screen-3xl mx-auto">
+
+                    <div class="flex w-full max-w-7xl mx-auto items-center justify-center md:justify-end">
+                        <strong class="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl text-gray-300 w-fit flex">
+                            1:1 MENTORSHIP
+                        </strong>
+                    </div>
+                    <div class="relative grid grid-cols-1 gap-5 w-full">
+
+                        <div class="flex flex-col border-y-4 py-5 border-brand-red w-full">
+                            <div class="flex h-60 md:h-500 w-full">
+                                <img src="assets/banner-img/mentorship without text.webp" alt=""
+                                    class="flex w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+
+                        <div class="flex md:hidden w-full px-5">
+
+                            <p class="flex w-full text-base text-justify text-white">
+                                Students with a clear understanding of their academic status and goals can effectively
+                                manage their studies, recognizing their aims and improvement areas. The two-phase
+                                one-on-one mentoring, first by core faculty and then by seasoned industry professionals,
+                                further supports this clarity and progress.
+                            </p>
+
+                        </div>
+
+                        <div class="hidden md:flex max-w-7xl mx-auto justify-end w-full">
+                            <div
+                                class="flex md:absolute md:top-2/3 md:left-[10%]  max-w-xl p-1 box-gradient2 rounded-2xl w-full">
+                                <div class="flex w-full bg-black md:py-10 md:px-10 rounded-2xl">
+                                    <p class="flex w-full leading-8 text-base text-justify text-white">
+                                        Students with a clear understanding of their academic status and goals can
+                                        effectively
+                                        manage their studies, recognizing their aims and improvement areas. The
+                                        two-phase
+                                        one-on-one mentoring, first by core faculty and then by seasoned industry
+                                        professionals,
+                                        further supports this clarity and progress.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="flex w-full md:h-screen md:max-h-[720px] gap-5 flex-col max-w-screen-3xl mx-auto">
+
+                    <div class="flex w-full max-w-7xl mx-auto items-center justify-center md:justify-start">
+                        <strong class="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl text-gray-300 w-fit flex">
+                            HACKATHONS
+                        </strong>
+                    </div>
+                    <div class="relative grid grid-cols-1 gap-5 w-full">
+
+                        <div class="flex flex-col border-y-4 py-5 border-brand-red w-full">
+                            <div class="flex h-60 md:h-500 w-full">
+                                <img src="assets/banner-img/hachathon.webp" alt=""
+                                    class="flex w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="flex md:hidden w-full px-5">
+
+                            <p class="flex w-full text-base text-justify text-white">
+                                ITM Skills University mandates student participation in hackathons, competitive coding,
+                                and open source projects, providing early exposure to real-world competition and
+                                equipping them with vital skills and experience for their field.
+                            </p>
+
+                        </div>
+
+                        <div class="hidden md:flex max-w-7xl mx-auto justify-end w-full">
+                            <div
+                                class="flex md:absolute md:top-2/3 md:right-[10%]  max-w-xl p-1 box-gradient2 rounded-2xl w-full">
+                                <div class="flex w-full bg-black md:py-10 md:px-10 rounded-2xl">
+                                    <p class="flex w-full leading-8 text-base text-justify text-white">
+                                        ITM Skills University mandates student participation in hackathons, competitive
+                                        coding,
+                                        and open source projects, providing early exposure to real-world competition and
+                                        equipping them with vital skills and experience for their field.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="flex w-full md:h-500 md:bg-lisa md:bg-[length:auto_100%] md:bg-no-repeat max-w-screen-3xl mx-auto md:border-y-4 md:border-brand-lisa">
+
+                    <div class="flex flex-col w-full h-full gap-5 max-w-7xl mx-auto">
+                        <div class="flex w-full items-center justify-center md:justify-end">
+                            <strong
+                                class="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl text-gray-300 w-fit flex">
+                                LISA
+                            </strong>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 h-4/5 w-full items-center justify-center">
+
+                            <div class="flex md:hidden flex-col border-y-4 py-5 border-brand-lisa w-full">
+                                <div class="flex h-60 md:h-full w-full">
+                                    <img src="assets/banner-img/lisa image.webp" alt=""
+                                        class="flex w-full h-full object-contain object-left">
+                                </div>
+                            </div>
+                            <div class="flex w-full">
+
+                            </div>
+
+                            <div class="flex flex-col gap-4 w-full px-5 md:px-0 items-center justify-center">
+
+                                <p class="flex w-full leading-8 text-base max-w-xl mx-auto text-justify text-white">
+                                    LetsUpgrade Tech Team created Lisa LXP, a unique software that adapts to each
+                                    student's
+                                    goals and life context, offering tailored course content and 24/7 access to live,
+                                    personal teaching assistance on their MacBooks
+                                </p>
+
+                                <div class="flex w-full max-w-lg mx-auto ">
+                                    <img src="assets/logo/lisa.webp" alt="" class="flex w-full h-full object-contain">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex w-full gap-5 max-w-7xl mx-auto flex-col">
+
+                    <div class="flex w-full items-center justify-center md:justify-start">
+                        <strong class="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl text-gray-300 w-fit flex">
+                            EVENTS
+                        </strong>
+                    </div>
+                    <div class="flex w-full overflow-x-scroll pb-3 card-scroll ">
+                        <div class=" flex w-fit items-center justify-center mx-auto">
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event19.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event19.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event2.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event2.webp" />
+                                </div>
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event3.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event3.webp" />
+                                </div>
+                            </div>
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event4.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event4.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event5.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event5.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event6.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event6.webp" />
+                                </div>
+                            </div>
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event7.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event7.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event8.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event8.webp" />
+                                </div>
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event9.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event9.webp" />
+                                </div>
+                            </div>
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event10.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event10.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event11.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event11.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event12.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event12.webp" />
+                                </div>
+                            </div>
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event13.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event13.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event14.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event14.webp" />
+                                </div>
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event15.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event15.webp" />
+                                </div>
+                            </div>
+                            <div class="flex w-80 h-80 flex-wrap">
+                                <div class="w-full h-2/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event16.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event16.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event17.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event17.webp" />
+                                </div>
+                                <div class="w-1/2 h-1/3 p-1">
+                                    <img alt="gallery" onclick="showImage('assets/events/event18.webp')"
+                                        class="flex h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        src="assets/events/event18.webp" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="imgModal"
+            class="hidden w-full h-screen bg-black bg-opacity-80 top-0 right-0 left-0 z-30 items-center justify-center fixed">
+            <div
+                class="flex max-w-7xl flex-col relative h-full w-full py-5 md:py-10  mx-auto my-auto items-center justify-center">
+                <div
+                    class="flex w-fit relative h-fit max-h-[500px] max-w-2xl mx-auto my-auto items-center justify-center bg-white rounded-md">
+                    <img id="showImg" class="object-contain  w-full h-full rounded-md" src="" alt="">
+                    <div class="flex absolute right-2 top-2 w-full items-center justify-end">
+                        <button onclick="closeImage()"
+                            class="px-2 py-2 rounded-md shadow-md bg-white bg-opacity-100 flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-3 h-3 md:w-4 md:h-4 text-brand-red">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="w-full overflow-hidden flex bg-black">
+            <div class="newsletter-container">
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="GIP" class="flex w-full bg-black">
+            <div class="flex flex-col w-full max-w-screen-3xl mx-auto">
+                <div class="flex w-full md:h-360">
+                    <img src="assets/banner-img/dubai.webp" alt="" class="flex w-full h-full object-cover">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto">
+
+                    <div class="flex flex-col gap-5 w-full px-5 py-20 max-w-lg mx-auto">
+                        <div class="flex w-full items-center justify-start">
+                            <p class="flex w-full text-base md:text-lg leading-8 text-center  text-white">Innovative and
+                                Comprehensive Program with Tech, Business, and Soft Skills.</p>
+                        </div>
+                        <div class="flex w-full items-center justify-center">
+                            <button onclick="openModal()" class="btn">
+                                Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex w-full h-72">
+
+                        <img src="assets/banner-img/paichat 3.webp" alt="" class="flex w-full object-contain">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full overflow-hidden flex bg-black">
+            <div class="newsletter-container">
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="Admission process" class="flex w-full">
+            <div
+                class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 xl:py-14">
+
+                <div class="flex gap-5 flex-col w-full">
+                    <h2
+                        class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                        ADMISSION PROCESS
+                    </h2>
+                    <p class="flex w-full">
+                        <code class="w-full text-base text-center">
+                        < Become part of the elite 1% as a software pioneer at ISU x LetsUpgrade. />
+                        </code>
+                    </p>
+                </div>
+
+                <div class="flex w-full overflow-x-scroll md:overflow-x-hidden card-scroll py-3">
+                    <div class="flex w-auto gap-3 md:gap-5 md:w-fit md:mx-auto justify-start">
+
+                        <div class="flex flex-col w-52 gap-2">
+                            <div class="flex w-full">
+                                <strong class="flex w-full text-gray-500 font-bold">STEP 1</strong>
+                            </div>
+                            <div
+                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
+                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
+                                    <div class="flex w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="86" height="89"
+                                            viewBox="0 0 86 89" fill="none">
+                                            <path
+                                                d="M35.5882 11.2353H10.8824C5.42448 11.2353 1 15.8178 1 21.4706V77.7647C1 83.4175 5.42448 88 10.8824 88H65.2353C70.6932 88 75.1177 83.4175 75.1177 77.7647V52.1765M68.1298 3.99785C71.9891 0.000717689 78.2462 0.000717689 82.1055 3.99785C85.9648 7.99498 85.9648 14.4756 82.1055 18.4727L39.6816 62.4118H25.7059L25.7059 47.9369L68.1298 3.99785Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex w-full justify-end">
+                                        <span class="flex text-white">Application Form</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52 gap-2">
+                            <div class="flex w-full">
+                                <strong class="flex w-full text-gray-500 font-bold">STEP 2</strong>
+                            </div>
+                            <div
+                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
+                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
+                                    <div class="flex w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="92" height="94"
+                                            viewBox="0 0 92 94" fill="none">
+                                            <rect width="92" height="94" fill="white" />
+                                            <path
+                                                d="M46 17.0539C48.8096 13.8014 52.9204 11.75 57.5 11.75C65.9684 11.75 72.8333 18.7642 72.8333 27.4167C72.8333 36.0691 65.9684 43.0833 57.5 43.0833C52.9203 43.0833 48.8096 41.032 46 37.7795M57.5 82.25H11.5V78.3333C11.5 65.3546 21.7975 54.8333 34.5 54.8333C47.2025 54.8333 57.5 65.3546 57.5 78.3333V82.25ZM57.5 82.25H80.5V78.3333C80.5 65.3546 70.2026 54.8333 57.5 54.8333C53.3107 54.8333 49.383 55.9777 46 57.9772M49.8333 27.4167C49.8333 36.0691 42.9684 43.0833 34.5 43.0833C26.0316 43.0833 19.1667 36.0691 19.1667 27.4167C19.1667 18.7642 26.0316 11.75 34.5 11.75C42.9684 11.75 49.8333 18.7642 49.8333 27.4167Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex w-full justify-end">
+                                        <span class="flex text-white">1:1 Interview</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52 gap-2">
+                            <div class="flex w-full">
+                                <strong class="flex w-full text-gray-500 font-bold">STEP 3</strong>
+                            </div>
+                            <div
+                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
+                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
+                                    <div class="flex w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="91" height="93"
+                                            viewBox="0 0 91 93" fill="none">
+                                            <path
+                                                d="M41.707 15.5C41.707 11.2198 45.1022 7.75 49.2904 7.75C53.4785 7.75 56.8737 11.2198 56.8737 15.5V19.375C56.8737 21.5151 58.5713 23.25 60.6654 23.25H72.0404C74.1344 23.25 75.832 24.9849 75.832 27.125V38.75C75.832 40.8901 74.1344 42.625 72.0404 42.625H68.2487C64.0605 42.625 60.6654 46.0948 60.6654 50.375C60.6654 54.6552 64.0605 58.125 68.2487 58.125H72.0404C74.1344 58.125 75.832 59.8599 75.832 62V73.625C75.832 75.7651 74.1344 77.5 72.0404 77.5H60.6654C58.5713 77.5 56.8737 75.7651 56.8737 73.625V69.75C56.8737 65.4698 53.4785 62 49.2904 62C45.1022 62 41.707 65.4698 41.707 69.75V73.625C41.707 75.7651 40.0094 77.5 37.9154 77.5H26.5404C24.4463 77.5 22.7487 75.7651 22.7487 73.625V62C22.7487 59.8599 21.0511 58.125 18.957 58.125H15.1654C10.9772 58.125 7.58203 54.6552 7.58203 50.375C7.58203 46.0948 10.9772 42.625 15.1654 42.625H18.957C21.0511 42.625 22.7487 40.8901 22.7487 38.75V27.125C22.7487 24.9849 24.4463 23.25 26.5404 23.25H37.9154C40.0094 23.25 41.707 21.5151 41.707 19.375V15.5Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex w-full justify-end">
+                                        <span class="flex text-white">CTO Challenge</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-52 gap-2">
+                            <div class="flex w-full">
+                                <strong class="flex w-full text-gray-500 font-bold">STEP 4</strong>
+                            </div>
+                            <div
+                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
+                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
+                                    <div class="flex w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="87"
+                                            viewBox="0 0 85 87" fill="none">
+                                            <path
+                                                d="M84 43.5C84 66.9942 65.398 86 42.5 86C19.602 86 1 66.9942 1 43.5C1 20.0058 19.602 1 42.5 1C65.398 1 84 20.0058 84 43.5ZM62.9093 37.1687C65.3636 34.6567 65.3636 30.5933 62.9093 28.0813C60.4423 25.5562 56.4327 25.5562 53.9657 28.0813L37.1875 45.2543L31.0343 38.9563C28.5673 36.4312 24.5577 36.4312 22.0907 38.9563C19.6364 41.4683 19.6364 45.5317 22.0907 48.0437L32.7157 58.9187C35.1827 61.4438 39.1923 61.4438 41.6593 58.9187L62.9093 37.1687Z"
+                                                stroke="#A91D54" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex w-full justify-end">
+                                        <span class="flex text-white">Enrollment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="FAQ" class="flex w-full">
+            <div
+                class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 xl:py-14">
+
+                <div class="flex w-full">
+                    <h2
+                        class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                        FAQ
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 w-full mx-auto">
+                    <div class="flex flex-col gap-5 w-full ">
+                        <ul class="flex flex-col w-full max-w-3xl text-sm md:text-base  mx-auto gap-4 cursor-pointer">
+                            <li class="flex w-full bg-white">
+                                <details
+                                    class="faq-details details flex flex-col w-full border-2  border-gray-300 group hover:border-brand-red  rounded-md">
+                                    <summary class="flex relative py-3 pl-3 w-full items-center">
+                                        <span class="flex w-[90%]">ISU is affiliated to which statutory body?</span>
+                                        <span class="flex absolute right-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="4.5" stroke="currentColor" class="w-5 h-5 text-brand-red">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col w-full gap-5 py-4 px-3">
+                                        <p class=" text-secondary font-normal text-gray-600"><strong>Answer
+                                                :</strong>&nbsp;ITM Skills University is formed under Maharashtra Act
+                                            No. X of 2023 ITM Skills University, Navi Mumbai
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                            <li class="flex w-full bg-white">
+                                <details
+                                    class="faq-details details flex flex-col w-full border-2  border-gray-300 group hover:border-brand-red  rounded-md">
+                                    <summary class="flex relative py-3 pl-3 w-full items-center">
+                                        <span class="flex w-[90%]">What is the Fee Structure of the 4 Year
+                                            Programme?</span>
+                                        <span class="flex absolute right-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="4.5" stroke="currentColor" class="w-5 h-5 text-brand-red">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col w-full gap-5 py-4 px-3">
+                                        <p class=" text-secondary font-normal text-gray-600"><strong>Answer
+                                                :</strong>&nbsp;Fees of total 4 Years is Rs.16 lakhs which includes
+                                            Macbook Pro, Casual Uniform and exclusive conferences & Meetup passes
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                            <li class="flex w-full bg-white">
+                                <details
+                                    class="faq-details details flex flex-col w-full border-2  border-gray-300 group hover:border-brand-red  rounded-md">
+                                    <summary class="flex relative py-3 pl-3 w-full items-center">
+                                        <span class="flex w-[90%]">What is the Selection Process</span>
+                                        <span class="flex absolute right-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="4.5" stroke="currentColor" class="w-5 h-5 text-brand-red">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col w-full gap-5 py-4 px-3">
+                                        <p class=" text-secondary font-normal text-gray-600"><strong>Answer
+                                                :</strong>&nbsp;Candidates are required to fill the Application form
+                                            online and take CTO challange in-person to get selected
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                            <li class="flex w-full bg-white">
+                                <details
+                                    class="faq-details details flex flex-col w-full border-2  border-gray-300 group hover:border-brand-red  rounded-md">
+                                    <summary class="flex relative py-3 pl-3 w-full items-center">
+                                        <span class="flex w-[90%]">How can I reach the Institute?</span>
+                                        <span class="flex absolute right-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="4.5" stroke="currentColor" class="w-5 h-5 text-brand-red">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col w-full gap-5 py-4 px-3">
+                                        <p class=" flex flex-col text-secondary font-normal text-gray-600">
+                                            <strong>Answer:</strong>
+                                        <ul class="list-disc w-full pl-5">
+                                            <li>ISU Kharghar is well connected by rail and road.</li>
+                                            <li>Air Route: Mumbai has an airport. Take cab to our campus, which takes
+                                                around thirty to forty minutes.</li>
+                                            <li>By Road: ISU is well connected to all the major highways like
+                                                Pune-Mumbai highway</li>
+                                            <li>By Rail: Kharghar local station is just 1.5kms away from ISU</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                            <li class="flex w-full bg-white">
+                                <details
+                                    class="faq-details details flex flex-col w-full border-2  border-gray-300 group hover:border-brand-red  rounded-md">
+                                    <summary class="flex relative py-3 pl-3 w-full items-center">
+                                        <span class="flex w-[90%]">How will I be graded in the Program</span>
+                                        <span class="flex absolute right-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="4.5" stroke="currentColor" class="w-5 h-5 text-brand-red">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col w-full gap-5 py-4 px-3">
+                                        <p class=" flex flex-col text-secondary font-normal text-gray-600">
+                                            <strong>Answer:</strong>&nbsp;
+                                            Final grades for the course will be determined through a sprint model,
+                                            including demo days after each sprint and an End Sem Project Day.
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+        </section>
+
+        <section class="w-full overflow-hidden flex bg-black">
+            <div class="newsletter-container">
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 1 year Internship
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; 100% Placement Guarantee
+                    </span>
+                </div>
+                <div class="newsletter-item">
+                    <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                fill="#FBBF24" />
+                        </svg>&nbsp; Minimum of 8 LPA
+                    </span>
+                </div>
+            </div>
+        </section>
 
     </main>
 
+    <footer class="flex w-full bg-black mb-14">
+        <div
+            class="flex flex-col gap-5 w-full max-w-7xl mx-auto py-10 px-5 bg-footer-banner bg-contain bg-no-repeat bg-bottom md:bg-[length:auto_50%] md:bg-[bottom_right]">
+            <div class="flex h-16 w-full">
+                <img src="assets/logo/ISU-LOGO-white.webp" alt="" class="flex w-auto h-full object-contain">
+            </div>
+            <div class="flex gap-3 flex-col w-full">
+                <p class="flex w-full text-justify max-w-lg text-sm md:text-base text-white">
+                    ITM Skills University emphasizes preparing executives or working professionals for everyday business
+                    challenges and developing insights and knowledge for strategic decision-making and career
+                    advancement.
+                </p>
+                <p class="flex w-full text-justify max-w-lg text-sm md:text-base text-white">
+                    ITM Skills University, Navi Mumbai Plot 25 & 26, Institutional Area, Sector 4, Kharghar, Navi
+                    Mumbai, Maharashtra 410210
+                </p>
+            </div>
+            <div class="flex flex-col w-full">
+                <div class="flex w-full">
+                    <p class="flex w-full text-justify max-w-lg text-sm md:text-base text-white">
+                        ITM Skills University © 2024
+                    </p>
+                </div>
+                <div class="flex w-full">
+                    <ul class="flex w-full gap-3">
+                        <li class="flex group w-fitrounded-md">
+                            <a href="https://www.facebook.com/ITMInstitutes/"
+                                class="flex w-fit rounded-full px-2 py-2 text-white hover:text-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256 " class="">
+                                    <g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM37,19h-2c-2.14,0 -3,0.5 -3,2v3h5l-1,5h-4v15h-5v-15h-4v-5h4v-3c0,-4 2,-7 6,-7c2.9,0 4,1 4,1z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="group flex w-fit rounded-md">
+                            <a href="https://www.linkedin.com/school/itm-group-of-institutions/"
+                                class="flex w-fit rounded-full px-2 py-2 text-white hover:text-blue-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="group flex w-fit rounded-md">
+                            <a href="https://twitter.com/ITMInstitutes"
+                                class="flex w-fit  rounded-full px-2 py-2 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M11,4c-3.866,0 -7,3.134 -7,7v28c0,3.866 3.134,7 7,7h28c3.866,0 7,-3.134 7,-7v-28c0,-3.866 -3.134,-7 -7,-7zM13.08594,13h7.9375l5.63672,8.00977l6.83984,-8.00977h2.5l-8.21094,9.61328l10.125,14.38672h-7.93555l-6.54102,-9.29297l-7.9375,9.29297h-2.5l9.30859,-10.89648zM16.91306,15l14.10742,20h3.06445l-14.10742,-20z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="group flex w-fit rounded-md">
+                            <a href="https://www.youtube.com/user/ITMGroupVideos"
+                                class="flex w-fit  rounded-full px-2 py-2 text-white  hover:text-red-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M44.89844,14.5c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.29687,-0.69922 -9.39844,-1.19922 -16,-1.19922c-6.59766,0 -12.79687,0.5 -16.09766,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.40234,2.5 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.5,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.60156,-0.5 16.10156,-1.19922c2.19922,-0.5 4.09766,-2 4.5,-4.30078c0.39844,-2.5 0.89844,-6.10156 1,-10.5c-0.20312,-4.5 -0.70312,-8 -1.20312,-10.5zM19,32v-14l12.19922,7z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="group flex w-fit rounded-md">
+                            <a href="https://www.instagram.com/itmgroupofinstitutions/"
+                                class="flex w-fit  rounded-full px-2 py-2 text-white  hover:text-red-400 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex h-32 w-full">
+
+            </div>
+        </div>
+    </footer>
 
 
     <script src="banner-scroll.js"></script>
     <script src="main.js"></script>
     <script src="video.js"></script>
+
+
+    <!-- No paper form -->
+    <script
+        type="text/javascript"> var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
+
+    <script type="text/javascript">
+        var npf_d = 'https://admission.isu.ac.in';
+        var npf_c = '5787';
+        var npf_m = '1';
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://track.nopaperforms.com/js/track.js";
+        document.body.appendChild(s);
+    </script>
 
 
 </body>
