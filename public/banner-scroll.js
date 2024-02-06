@@ -5,7 +5,7 @@ const originalImage = imageContainer.querySelector('img');
 const clonedImage = originalImage.cloneNode(true);
 imageContainer.appendChild(clonedImage);
 
-let scrollSpeed = 1;
+let scrollSpeed = 0.5;
 let scrollPosition = 0;
 let isPaused = false;
 
@@ -28,7 +28,7 @@ function pauseScroll() {
 }
 
 function resumeScroll() {
-    isPaused = false;  // Corrected to set isPaused to false
+    isPaused = false; 
 }
 
 scrollImages();

@@ -28,7 +28,7 @@
 }
 
 .btn {
-    @apply flex h-fit w-fit px-4 py-2 rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;
+    @apply flex h-fit w-fit px-5 py-2 rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;
 }
 
 .shimmer-effect {
@@ -81,11 +81,11 @@
 }
 
 .newsletter-item {
-    @apply flex w-fit h-8 text-white;
+    @apply flex w-fit h-6 text-white;
 }
 
 .newsletter-item span {
-    @apply flex items-center justify-center;
+    @apply flex text-sm items-center justify-center;
 }
 
 .newsletter-item span img {

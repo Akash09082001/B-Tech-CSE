@@ -24,7 +24,7 @@ module.exports = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
-      "3xl": "1636px",
+      "3xl": "1986px",
     },
     colors: {
       "brand-red": "#A91D54",
@@ -72,6 +72,7 @@ module.exports = {
         "2xl+": ["28px", "34px"],
         "4xl+": ["36px", "40px"],
         "5xl+": ["54px", "1"],
+      
       },
       textUnderlineOffset: {
         6: "6px",

@@ -15,21 +15,21 @@
 
 <body class="bg-grid-slate card-scroll">
 
-    <header class="flex w-full fixed z-30 bg-white shadow-md">
+    <header class="flex flex-col w-full fixed z-30 bg-white shadow-md">
 
-        <div class="flex w-full max-w-7xl mx-auto gap-2 px-2 py-1 justify-between ">
+        <div class="flex w-full max-w-7xl mx-auto gap-2 px-2 justify-between ">
             <div class="flex w-fit divide-x">
                 <div class="flex w-fit h-14">
                     <img src="assets/logo/ISU-LOGO.webp" alt="ITM University logo"
                         class="flex w-full h-full  object-contain">
                 </div>
-                <div class="flex w-fit h-14">
+                <div class="hidden sm:flex w-fit h-14">
                     <img src="assets/logo/32 YEARS OF EDU.webp" alt="32 YEARS OF EDU"
                         class="flex w-full h-full  object-contain">
                 </div>
             </div>
             <div class="flex w-fit">
-                <div class="hidden md:flex w-fit">
+                <div class="flex w-fit">
                     <button onclick="applyNow()" class="btn">
                         Apply Now
                     </button>
@@ -45,227 +45,7 @@
                 </div> -->
             </div>
         </div>
-
-    </header>
-
-    <main class="flex w-full flex-col pt-16 ">
-
-        <div class="flex w-full fixed bottom-0 z-30 bg-white">
-            <button onclick="applyNow()"
-                class="flex w-full bg-brand-red py-4 text-base text-white text-center items-center justify-center shimmer-effect1">
-                Apply Now
-            </button>
-        </div>
-
-        <section id="Hero" class="flex w-full">
-            <div class="flex flex-col w-full md:py-5 lg:py-8 ">
-
-                <div class="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 w-full max-w-7xl mx-auto">
-                    <div class="flex w-full md:order-2 ">
-                        <div class="flex w-fit h-fit my-auto md:rounded-md">
-                            <video id="myVideo" class=" flex h-fit w-full md:w-fit md:rounded-md" autoplay muted loop
-                                playsinline>
-                                <source src="assets/video/herovideo.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3 md:gap-4 lg:gap-5 w-full px-5 md:px-0 md:order-1">
-                        <div class="flex flex-col w-full">
-                            <span class="text-base sm:text-lg md:text-xl font-medium lg:font-bold">This is what</span>
-                            <h1
-                                class="flex font-extrabold gap-1 flex-col text-4xl md:text-4xl+ lg:text-6xl w-full shimmer-effect1">
-                                <span>India’s best</span>
-                                <span class="gap-2 flex w-full items-end">
-                                    <span class="bg-brand-red text-white font-extrabold w-fit px-1 rounded-md">B.Tech
-                                        CSE </span>
-                                    <span class="text-base sm:text-lg md:text-xl font-medium lg:font-bold">looks
-                                        like</span>
-                                </span>
-                            </h1>
-                        </div>
-                        <div class="flex w-full">
-                            <ul class="flex flex-col gap-2 text-base w-full">
-                                <li class="flex w-full items-center gap-2">
-                                    <span class="flex w-fit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
-                                            viewBox="0 0 17 19" fill="none">
-                                            <path
-                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    <span>1 year <u
-                                            class="underline decoration-brand-red decoration-2 underline-offset-4">Internship</u>
-                                    </span>
-                                </li>
-                                <li class="flex w-full items-center gap-2">
-                                    <span class="flex w-fit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
-                                            viewBox="0 0 17 19" fill="none">
-                                            <path
-                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    <span><u
-                                            class="underline decoration-brand-red decoration-2 underline-offset-4">100%</u>
-                                        Placement Guarantee</span>
-                                </li>
-                                <li class="flex w-full items-center gap-2">
-                                    <span class="flex w-fit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
-                                            viewBox="0 0 17 19" fill="none">
-                                            <path
-                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    <span>Minimum of <u
-                                            class="underline decoration-brand-red decoration-2 underline-offset-4">8
-                                            LPA</u></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex w-full gap-3">
-                            <button onclick="openModal()" class="btn">Enquire
-                                Now</button>
-                            <a href="" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M18.4405 3.55161C17.4697 2.58039 16.3165 1.81077 15.0471 1.28706C13.7777 0.763341 12.4172 0.495872 11.0441 0.500048C5.28125 0.500048 0.59 5.16786 0.587656 10.9063C0.585107 12.7335 1.06676 14.5288 1.98359 16.1094L0.5 21.5001L6.04297 20.053C7.57729 20.8842 9.29484 21.3192 11.0398 21.3186H11.0441C16.8064 21.3186 21.4972 16.6504 21.5 10.9124C21.5035 9.5439 21.2348 8.18839 20.7095 6.92471C20.1843 5.66103 19.413 4.51442 18.4405 3.55161ZM11.0441 19.5622H11.0403C9.48471 19.5627 7.95739 19.1464 6.61719 18.3566L6.29984 18.1691L3.01062 19.0279L3.88859 15.8361L3.68187 15.508C2.81206 14.1309 2.35121 12.5351 2.35297 10.9063C2.35297 6.1377 6.25344 2.25786 11.0473 2.25786C13.347 2.25375 15.5542 3.16327 17.1833 4.78636C18.8125 6.40944 19.7302 8.61318 19.7347 10.9129C19.7328 15.6819 15.8342 19.5622 11.0441 19.5622ZM15.8108 13.0846C15.5497 12.9543 14.2639 12.3252 14.0258 12.2385C13.7877 12.1518 13.6119 12.1082 13.438 12.3688C13.2641 12.6294 12.763 13.2126 12.6106 13.3883C12.4583 13.5641 12.3059 13.5833 12.0448 13.453C11.7838 13.3227 10.9414 13.0485 9.94344 12.1625C9.16672 11.473 8.64266 10.6218 8.49031 10.3616C8.33797 10.1015 8.47391 9.96036 8.60469 9.83099C8.72234 9.71427 8.86578 9.52724 8.99656 9.37536C9.12734 9.22349 9.17094 9.11474 9.25766 8.9413C9.34438 8.76786 9.30125 8.61599 9.23609 8.48614C9.17094 8.3563 8.64828 7.07614 8.43078 6.55536C8.21844 6.04817 8.00328 6.11708 7.84297 6.10911C7.69062 6.10161 7.51484 6.09974 7.34188 6.09974C7.20965 6.10318 7.07955 6.13384 6.9597 6.18981C6.83985 6.24579 6.73283 6.32586 6.64531 6.42505C6.40578 6.68567 5.73078 7.31567 5.73078 8.59442C5.73078 9.87317 6.66828 11.1107 6.79766 11.2841C6.92703 11.4575 8.63984 14.084 11.2606 15.2104C11.7473 15.4188 12.2445 15.6015 12.7503 15.7579C13.3761 15.9557 13.9456 15.928 14.3956 15.861C14.8977 15.7865 15.9425 15.2319 16.1595 14.6244C16.3766 14.0169 16.377 13.4966 16.3119 13.3883C16.2467 13.2801 16.0723 13.2144 15.8108 13.0846Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/school_of_future_tech/" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
-                                    fill="none">
-                                    <path
-                                        d="M14.8748 1.74984C16.0342 1.75331 17.1451 2.21539 17.9648 3.03517C18.7846 3.85495 19.2467 4.96582 19.2502 6.12516V14.8748C19.2467 16.0342 18.7846 17.1451 17.9648 17.9648C17.1451 18.7846 16.0342 19.2467 14.8748 19.2502H6.12516C4.96582 19.2467 3.85495 18.7846 3.03517 17.9648C2.21539 17.1451 1.75331 16.0342 1.74984 14.8748V6.12516C1.75331 4.96582 2.21539 3.85495 3.03517 3.03517C3.85495 2.21539 4.96582 1.75331 6.12516 1.74984H14.8748ZM14.8748 0H6.12516C2.75625 0 0 2.75625 0 6.12516V14.8748C0 18.2437 2.75625 21 6.12516 21H14.8748C18.2437 21 21 18.2437 21 14.8748V6.12516C21 2.75625 18.2437 0 14.8748 0Z"
-                                        fill="white" />
-                                    <path
-                                        d="M16.1491 6.20454C15.8817 6.20454 15.6202 6.12523 15.3979 5.97664C15.1755 5.82805 15.0022 5.61686 14.8998 5.36976C14.7975 5.12267 14.7707 4.85077 14.8229 4.58846C14.875 4.32614 15.0038 4.08519 15.1929 3.89607C15.3821 3.70695 15.623 3.57816 15.8853 3.52598C16.1476 3.47381 16.4195 3.50059 16.6666 3.60294C16.9137 3.70529 17.1249 3.87861 17.2735 4.10099C17.4221 4.32337 17.5014 4.58482 17.5014 4.85227C17.5018 5.02996 17.4671 5.20598 17.3993 5.37021C17.3314 5.53445 17.2318 5.68368 17.1062 5.80932C16.9806 5.93497 16.8313 6.03456 16.6671 6.10238C16.5029 6.17021 16.3268 6.20492 16.1491 6.20454Z"
-                                        fill="white" />
-                                    <path
-                                        d="M10.5 6.99984C11.1923 6.99984 11.869 7.20512 12.4446 7.58973C13.0202 7.97433 13.4688 8.52098 13.7337 9.16055C13.9986 9.80012 14.068 10.5039 13.9329 11.1828C13.7978 11.8618 13.4645 12.4855 12.975 12.975C12.4855 13.4645 11.8618 13.7978 11.1828 13.9329C10.5039 14.068 9.80012 13.9986 9.16055 13.7337C8.52098 13.4688 7.97433 13.0202 7.58973 12.4446C7.20513 11.869 6.99985 11.1923 6.99985 10.5C7.00084 9.572 7.36992 8.6823 8.02611 8.02611C8.68231 7.36992 9.57201 7.00084 10.5 6.99984ZM10.5 5.25C9.46165 5.25 8.44662 5.55791 7.58326 6.13478C6.7199 6.71166 6.04699 7.5316 5.64963 8.49091C5.25227 9.45022 5.14831 10.5058 5.35088 11.5242C5.55345 12.5426 6.05347 13.4781 6.78769 14.2123C7.52192 14.9465 8.45738 15.4465 9.47578 15.6491C10.4942 15.8517 11.5498 15.7477 12.5091 15.3504C13.4684 14.953 14.2883 14.2801 14.8652 13.4167C15.4421 12.5534 15.75 11.5384 15.75 10.5C15.75 9.10761 15.1969 7.77225 14.2123 6.78769C13.2277 5.80312 11.8924 5.25 10.5 5.25Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
-                                    fill="none">
-                                    <path
-                                        d="M16.037 19.6871C15.2364 19.6871 14.1117 19.3975 12.4276 18.4567C10.3797 17.3082 8.79568 16.248 6.75884 14.2165C4.79501 12.2539 3.83935 10.9832 2.50183 8.54933C0.990816 5.80128 1.24839 4.36081 1.53632 3.74517C1.87921 3.00935 2.38535 2.56925 3.03955 2.13243C3.41113 1.88898 3.80435 1.68028 4.21423 1.50899C4.25525 1.49136 4.29339 1.47454 4.32744 1.45937C4.53046 1.3679 4.83808 1.22968 5.22773 1.37733C5.48777 1.47495 5.71992 1.6747 6.08332 2.03358C6.82857 2.76858 7.84699 4.40552 8.22269 5.20942C8.47494 5.75124 8.64187 6.1089 8.64228 6.51003C8.64228 6.97966 8.40603 7.34183 8.11933 7.73271C8.0656 7.80612 8.01228 7.87626 7.9606 7.94435C7.64847 8.3545 7.57998 8.47304 7.62509 8.68468C7.71656 9.11001 8.39865 10.3762 9.51961 11.4947C10.6406 12.6132 11.8702 13.2522 12.2972 13.3432C12.5178 13.3904 12.6388 13.319 13.0621 12.9958C13.1228 12.9495 13.1852 12.9015 13.2504 12.8535C13.6876 12.5283 14.033 12.2982 14.4915 12.2982H14.494C14.8931 12.2982 15.2347 12.4712 15.8007 12.7567C16.539 13.1291 18.2252 14.1344 18.9647 14.8805C19.3244 15.2431 19.525 15.4744 19.623 15.734C19.7706 16.1249 19.6316 16.4313 19.541 16.6364C19.5258 16.6704 19.509 16.7077 19.4913 16.7492C19.3187 17.1583 19.1088 17.5507 18.8642 17.9214C18.4282 18.5735 17.9865 19.0784 17.249 19.4217C16.8703 19.6009 16.4559 19.6916 16.037 19.6871Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="modal"
-            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
-            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
-
-                <div
-                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
-                    <div class="flex w-full py-2">
-                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
-                            Enquire Now</h2>
-                    </div>
-                    <div class="flex w-fit absolute  top-0  right-0">
-                        <button onclick="closeModal()" class="px-2 py-2 rounded-md bg-white flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-6 h-6 text-brand-red ">
-                                <path fill-rule="evenodd"
-                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
-                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="modal1"
-            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
-            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
-                <div
-                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
-                    <div class="flex w-full py-2">
-                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
-                            Enter details to get brochure</h2>
-                    </div>
-                    <div class="flex w-fit absolute  top-0  right-0">
-                        <button onclick="closeModal1()" class="px-2 py-2 rounded-md bg-white flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-6 h-6 text-brand-red ">
-                                <path fill-rule="evenodd"
-                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
-                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Specialization" class="flex w-full">
-            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10">
-
-                <div class="flex w-full">
-                    <h2
-                        class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
-                        SPECIALIZATIONS
-                    </h2>
-                </div>
-
-                <div class="flex w-full overflow-x-scroll xl:overflow-x-hidden card-scroll py-3">
-                    <div class="flex w-auto justify-start gap-3">
-
-                        <div
-                            class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
-                            <img src="assets/spcialsation-img/ai-ml.webp"
-                                alt="Artificial Intelligence and machine learning" srcset=""
-                                class="flex w-full h-full object-cover rounded-2xl">
-                        </div>
-                        <div
-                            class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
-                            <img src="assets/spcialsation-img/data-science.webp" alt="Data Science" srcset=""
-                                class="flex w-full h-full object-cover rounded-2xl">
-                        </div>
-                        <div
-                            class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
-                            <img src="assets/spcialsation-img/ar-vr.webp" alt="ar/vr" srcset=""
-                                class="flex w-full h-full object-cover rounded-2xl">
-                        </div>
-                        <div
-                            class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
-                            <img src="assets/spcialsation-img/web-3.webp" alt="web 3" srcset=""
-                                class="flex w-full h-full object-cover rounded-2xl">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="w-full overflow-hidden flex bg-black">
+        <div class="w-full overflow-hidden flex bg-black">
             <div class="newsletter-container">
                 <div class="newsletter-item">
                     <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -374,6 +154,348 @@
                                 fill="#FBBF24" />
                         </svg>&nbsp; Minimum of 8 LPA
                     </span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="flex w-full flex-col pt-20 ">
+
+        <div id="floatBtn" class="flex w-full fixed bottom-0 z-30 bg-white">
+            <button onclick="applyNow()"
+                class="flex w-full bg-brand-red py-4 text-base text-white text-center items-center justify-center shimmer-effect1">
+                Apply Now
+            </button>
+        </div>
+
+        <section id="Hero" class="flex w-full">
+            <div class="flex flex-col w-full md:py-5 lg:py-8 ">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 w-full max-w-7xl mx-auto">
+                    <div class="flex w-full md:order-2 ">
+                        <div class="flex relative w-fit h-fit my-auto md:rounded-md">
+                            <video id="myVideo" class="flex aspect-video h-fit w-full md:w-fit md:rounded-md" muted loop>
+                                <source src="assets/video/herovideo.mp4" type="video/mp4" />
+                            </video>
+                            <div id="videoImg" onclick="playVideo()" class="flex absolute aspect-video w-full md:w-fit md:rounded-md">
+                                <img src="assets/video/video-banner.webp" alt="video-banner" class="flex w-full h-full object-contain">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 md:gap-4 w-full px-5 md:px-0 md:order-1">
+                        <div class="flex flex-col w-full">
+                            <span class="text-base sm:text-lg md:text-xl font-medium lg:font-bold">This is what</span>
+                            <h1
+                                class="flex font-extrabold gap-1 flex-col text-4xl md:text-4xl+ lg:text-6xl w-full shimmer-effect1">
+                                <span>India’s best</span>
+                                <span class="gap-2 flex w-full items-end">
+                                    <span class="bg-brand-red text-white font-extrabold w-fit px-1 rounded-md">B.Tech
+                                        CSE </span>
+                                    <span class="text-base sm:text-lg md:text-xl font-medium lg:font-bold">looks
+                                        like</span>
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="flex w-full">
+                            <ul class="flex flex-col gap-2 text-base w-full">
+                                <li class="flex w-full items-center gap-2">
+                                    <span class="flex w-fit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
+                                            viewBox="0 0 17 19" fill="none">
+                                            <path
+                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span>1 year <u
+                                            class="underline decoration-brand-red decoration-2 underline-offset-4">Internship</u>
+                                    </span>
+                                </li>
+                                <li class="flex w-full items-center gap-2">
+                                    <span class="flex w-fit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
+                                            viewBox="0 0 17 19" fill="none">
+                                            <path
+                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span><u
+                                            class="underline decoration-brand-red decoration-2 underline-offset-4">100%</u>
+                                        Placement Guarantee</span>
+                                </li>
+                                <li class="flex w-full items-center gap-2">
+                                    <span class="flex w-fit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19"
+                                            viewBox="0 0 17 19" fill="none">
+                                            <path
+                                                d="M9.98051 7.55619C10.0765 7.84234 10.2966 8.06981 10.5795 8.17518L14.1356 9.5L10.5795 10.8248C10.2966 10.9302 10.0765 11.1577 9.98051 11.4438L8.5 15.8563L7.01949 11.4438C6.92348 11.1577 6.70337 10.9302 6.42054 10.8248L2.86443 9.5L6.42054 8.17518C6.70337 8.06981 6.92348 7.84234 7.01949 7.55619L8.5 3.14368L9.98051 7.55619Z"
+                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span>Minimum of <u
+                                            class="underline decoration-brand-red decoration-2 underline-offset-4">8
+                                            LPA</u></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex w-full">
+                            <ul class="flex flex-col gap-1 text-base w-full">
+                                <li class="flex w-full">
+                                    <strong>Classes Commence :</strong>&nbsp;
+                                    <strong class="text-brand-red">31<sup>st</sup> July 2024</strong>
+                                </li>
+                                <li class="flex w-full">
+                                    <strong>Intake Deadline :</strong>&nbsp;
+                                    <strong class="text-brand-red">30<sup>th</sup> April 2024</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex w-full gap-3">
+                            <button onclick="openModal()" class="btn">Enquire
+                                Now</button>
+                            <a href="" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.4405 3.55161C17.4697 2.58039 16.3165 1.81077 15.0471 1.28706C13.7777 0.763341 12.4172 0.495872 11.0441 0.500048C5.28125 0.500048 0.59 5.16786 0.587656 10.9063C0.585107 12.7335 1.06676 14.5288 1.98359 16.1094L0.5 21.5001L6.04297 20.053C7.57729 20.8842 9.29484 21.3192 11.0398 21.3186H11.0441C16.8064 21.3186 21.4972 16.6504 21.5 10.9124C21.5035 9.5439 21.2348 8.18839 20.7095 6.92471C20.1843 5.66103 19.413 4.51442 18.4405 3.55161ZM11.0441 19.5622H11.0403C9.48471 19.5627 7.95739 19.1464 6.61719 18.3566L6.29984 18.1691L3.01062 19.0279L3.88859 15.8361L3.68187 15.508C2.81206 14.1309 2.35121 12.5351 2.35297 10.9063C2.35297 6.1377 6.25344 2.25786 11.0473 2.25786C13.347 2.25375 15.5542 3.16327 17.1833 4.78636C18.8125 6.40944 19.7302 8.61318 19.7347 10.9129C19.7328 15.6819 15.8342 19.5622 11.0441 19.5622ZM15.8108 13.0846C15.5497 12.9543 14.2639 12.3252 14.0258 12.2385C13.7877 12.1518 13.6119 12.1082 13.438 12.3688C13.2641 12.6294 12.763 13.2126 12.6106 13.3883C12.4583 13.5641 12.3059 13.5833 12.0448 13.453C11.7838 13.3227 10.9414 13.0485 9.94344 12.1625C9.16672 11.473 8.64266 10.6218 8.49031 10.3616C8.33797 10.1015 8.47391 9.96036 8.60469 9.83099C8.72234 9.71427 8.86578 9.52724 8.99656 9.37536C9.12734 9.22349 9.17094 9.11474 9.25766 8.9413C9.34438 8.76786 9.30125 8.61599 9.23609 8.48614C9.17094 8.3563 8.64828 7.07614 8.43078 6.55536C8.21844 6.04817 8.00328 6.11708 7.84297 6.10911C7.69062 6.10161 7.51484 6.09974 7.34188 6.09974C7.20965 6.10318 7.07955 6.13384 6.9597 6.18981C6.83985 6.24579 6.73283 6.32586 6.64531 6.42505C6.40578 6.68567 5.73078 7.31567 5.73078 8.59442C5.73078 9.87317 6.66828 11.1107 6.79766 11.2841C6.92703 11.4575 8.63984 14.084 11.2606 15.2104C11.7473 15.4188 12.2445 15.6015 12.7503 15.7579C13.3761 15.9557 13.9456 15.928 14.3956 15.861C14.8977 15.7865 15.9425 15.2319 16.1595 14.6244C16.3766 14.0169 16.377 13.4966 16.3119 13.3883C16.2467 13.2801 16.0723 13.2144 15.8108 13.0846Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/school_of_future_tech/" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                    fill="none">
+                                    <path
+                                        d="M14.8748 1.74984C16.0342 1.75331 17.1451 2.21539 17.9648 3.03517C18.7846 3.85495 19.2467 4.96582 19.2502 6.12516V14.8748C19.2467 16.0342 18.7846 17.1451 17.9648 17.9648C17.1451 18.7846 16.0342 19.2467 14.8748 19.2502H6.12516C4.96582 19.2467 3.85495 18.7846 3.03517 17.9648C2.21539 17.1451 1.75331 16.0342 1.74984 14.8748V6.12516C1.75331 4.96582 2.21539 3.85495 3.03517 3.03517C3.85495 2.21539 4.96582 1.75331 6.12516 1.74984H14.8748ZM14.8748 0H6.12516C2.75625 0 0 2.75625 0 6.12516V14.8748C0 18.2437 2.75625 21 6.12516 21H14.8748C18.2437 21 21 18.2437 21 14.8748V6.12516C21 2.75625 18.2437 0 14.8748 0Z"
+                                        fill="white" />
+                                    <path
+                                        d="M16.1491 6.20454C15.8817 6.20454 15.6202 6.12523 15.3979 5.97664C15.1755 5.82805 15.0022 5.61686 14.8998 5.36976C14.7975 5.12267 14.7707 4.85077 14.8229 4.58846C14.875 4.32614 15.0038 4.08519 15.1929 3.89607C15.3821 3.70695 15.623 3.57816 15.8853 3.52598C16.1476 3.47381 16.4195 3.50059 16.6666 3.60294C16.9137 3.70529 17.1249 3.87861 17.2735 4.10099C17.4221 4.32337 17.5014 4.58482 17.5014 4.85227C17.5018 5.02996 17.4671 5.20598 17.3993 5.37021C17.3314 5.53445 17.2318 5.68368 17.1062 5.80932C16.9806 5.93497 16.8313 6.03456 16.6671 6.10238C16.5029 6.17021 16.3268 6.20492 16.1491 6.20454Z"
+                                        fill="white" />
+                                    <path
+                                        d="M10.5 6.99984C11.1923 6.99984 11.869 7.20512 12.4446 7.58973C13.0202 7.97433 13.4688 8.52098 13.7337 9.16055C13.9986 9.80012 14.068 10.5039 13.9329 11.1828C13.7978 11.8618 13.4645 12.4855 12.975 12.975C12.4855 13.4645 11.8618 13.7978 11.1828 13.9329C10.5039 14.068 9.80012 13.9986 9.16055 13.7337C8.52098 13.4688 7.97433 13.0202 7.58973 12.4446C7.20513 11.869 6.99985 11.1923 6.99985 10.5C7.00084 9.572 7.36992 8.6823 8.02611 8.02611C8.68231 7.36992 9.57201 7.00084 10.5 6.99984ZM10.5 5.25C9.46165 5.25 8.44662 5.55791 7.58326 6.13478C6.7199 6.71166 6.04699 7.5316 5.64963 8.49091C5.25227 9.45022 5.14831 10.5058 5.35088 11.5242C5.55345 12.5426 6.05347 13.4781 6.78769 14.2123C7.52192 14.9465 8.45738 15.4465 9.47578 15.6491C10.4942 15.8517 11.5498 15.7477 12.5091 15.3504C13.4684 14.953 14.2883 14.2801 14.8652 13.4167C15.4421 12.5534 15.75 11.5384 15.75 10.5C15.75 9.10761 15.1969 7.77225 14.2123 6.78769C13.2277 5.80312 11.8924 5.25 10.5 5.25Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a href="" class="flex w-fit bg-brand-red text-white px-2 py-2 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                    fill="none">
+                                    <path
+                                        d="M16.037 19.6871C15.2364 19.6871 14.1117 19.3975 12.4276 18.4567C10.3797 17.3082 8.79568 16.248 6.75884 14.2165C4.79501 12.2539 3.83935 10.9832 2.50183 8.54933C0.990816 5.80128 1.24839 4.36081 1.53632 3.74517C1.87921 3.00935 2.38535 2.56925 3.03955 2.13243C3.41113 1.88898 3.80435 1.68028 4.21423 1.50899C4.25525 1.49136 4.29339 1.47454 4.32744 1.45937C4.53046 1.3679 4.83808 1.22968 5.22773 1.37733C5.48777 1.47495 5.71992 1.6747 6.08332 2.03358C6.82857 2.76858 7.84699 4.40552 8.22269 5.20942C8.47494 5.75124 8.64187 6.1089 8.64228 6.51003C8.64228 6.97966 8.40603 7.34183 8.11933 7.73271C8.0656 7.80612 8.01228 7.87626 7.9606 7.94435C7.64847 8.3545 7.57998 8.47304 7.62509 8.68468C7.71656 9.11001 8.39865 10.3762 9.51961 11.4947C10.6406 12.6132 11.8702 13.2522 12.2972 13.3432C12.5178 13.3904 12.6388 13.319 13.0621 12.9958C13.1228 12.9495 13.1852 12.9015 13.2504 12.8535C13.6876 12.5283 14.033 12.2982 14.4915 12.2982H14.494C14.8931 12.2982 15.2347 12.4712 15.8007 12.7567C16.539 13.1291 18.2252 14.1344 18.9647 14.8805C19.3244 15.2431 19.525 15.4744 19.623 15.734C19.7706 16.1249 19.6316 16.4313 19.541 16.6364C19.5258 16.6704 19.509 16.7077 19.4913 16.7492C19.3187 17.1583 19.1088 17.5507 18.8642 17.9214C18.4282 18.5735 17.9865 19.0784 17.249 19.4217C16.8703 19.6009 16.4559 19.6916 16.037 19.6871Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 py-5 md:py-8">
+                    <div class="flex w-full">
+                        <h2
+                            class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                            SPECIALIZATIONS
+                        </h2>
+                    </div>
+    
+                    <div class="flex w-full overflow-x-scroll xl:overflow-x-hidden card-scroll py-3">
+                        <div class="flex w-auto justify-start gap-3">
+    
+                            <div
+                                class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
+                                <img src="assets/spcialsation-img/ai-ml.webp"
+                                    alt="Artificial Intelligence and machine learning" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div
+                                class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
+                                <img src="assets/spcialsation-img/data-science.webp" alt="Data Science" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div
+                                class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
+                                <img src="assets/spcialsation-img/ar-vr.webp" alt="ar/vr" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+                            <div
+                                class="flex border border-gray-300 w-80 xl:w-full max-w-xs rounded-2xl transition-all hover:shadow-md hover:-translate-y-2">
+                                <img src="assets/spcialsation-img/web-3.webp" alt="web 3" srcset=""
+                                    class="flex w-full h-full object-cover rounded-2xl">
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="w-full overflow-hidden flex bg-black">
+                    <div class="newsletter-container">
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 1 year Internship
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 100% Placement Guarantee
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; Minimum of 8 LPA
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 1 year Internship
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 100% Placement Guarantee
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; Minimum of 8 LPA
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 1 year Internship
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 100% Placement Guarantee
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; Minimum of 8 LPA
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 1 year Internship
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; 100% Placement Guarantee
+                            </span>
+                        </div>
+                        <div class="newsletter-item">
+                            <span class="font-xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 25 25" fill="none">
+                                    <path
+                                        d="M25 9.55915H15.4354L12.5 0L9.56458 9.55915H0L7.82344 15.4408L4.77656 25L12.5 19.0759L20.2234 25L17.1708 15.4408L25 9.55915Z"
+                                        fill="#FBBF24" />
+                                </svg>&nbsp; Minimum of 8 LPA
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modal"
+            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
+            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
+
+                <div
+                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
+                    <div class="flex w-full py-2">
+                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
+                            Enquire Now</h2>
+                    </div>
+                    <div class="flex w-fit absolute  top-0  right-0">
+                        <button onclick="closeModal()" class="px-2 py-2 rounded-md bg-white flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-brand-red ">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
+                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modal1"
+            class="hidden w-full h-screen bg-black bg-opacity-50 top-0 right-0 left-0 z-30 items-center justify-center fixed">
+            <div class="flex max-w-7xl relative w-full py-5 md:py-10  mx-auto my-auto">
+                <div
+                    class="flex w-full relative h-fit md:max-w-sm mx-auto  items-center justify-center flex-col bg-brand-gray rounded-md">
+                    <div class="flex w-full py-2">
+                        <h2 class="flex w-full text-center font-bold text-xl items-center justify-center">
+                            Enter details to get brochure</h2>
+                    </div>
+                    <div class="flex w-fit absolute  top-0  right-0">
+                        <button onclick="closeModal1()" class="px-2 py-2 rounded-md bg-white flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-brand-red ">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex w-full h-[400px] py-3 items-center justify-center">
+                        <div class="npf_wgts" data-height="400px" data-w="c558c8c4396d7e0f7fd48d2c3b1f395a">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
