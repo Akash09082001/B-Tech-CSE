@@ -1,16 +1,19 @@
 function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
     const scrollContainer = document.getElementById(scrollContainerId);
     const imageContainer = document.getElementById(imageContainerId);
-    const images = imageContainer.querySelectorAll('img');
-
-    images.forEach((image, index) => {
-        const clonedImage = image.cloneNode(true);
-        imageContainer.appendChild(clonedImage);
-    });
+    const images = Array.from(imageContainer.querySelectorAll('img'));
 
     let scrollPosition = 0;
     let isPaused = false;
-    const totalWidth = Array.from(images).reduce((width, img) => width + img.width, 0);
+    const totalWidth = images.reduce((width, img) => width + img.width, 0);
+
+    function resetImages() {
+        images.forEach((image, index) => {
+            image.style.transform = `translateX(${index * 100}%)`;
+        });
+    }
+
+    resetImages();
 
     function scrollImages() {
         if (!isPaused) {
@@ -19,14 +22,14 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
 
             if (scrollPosition >= totalWidth) {
                 scrollPosition = 0;
-                imageContainer.style.transform = `translateX(0)`;
+                resetImages();
             }
         }
 
         requestAnimationFrame(scrollImages);
     }
+
     scrollImages();
-    
 }
 
 const container1 = createScrollEffect('scrollContainer1', 'imageContainer1', 0.5);
