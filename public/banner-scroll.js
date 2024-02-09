@@ -1,34 +1,34 @@
-const scrollContainer = document.getElementById('scrollContainer');
-const imageContainer = document.getElementById('imageContainer');
-const originalImage = imageContainer.querySelector('img');
+function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
+    const scrollContainer = document.getElementById(scrollContainerId);
+    const imageContainer = document.getElementById(imageContainerId);
+    const images = imageContainer.querySelectorAll('img');
 
-const clonedImage = originalImage.cloneNode(true);
-imageContainer.appendChild(clonedImage);
+    images.forEach((image, index) => {
+        const clonedImage = image.cloneNode(true);
+        imageContainer.appendChild(clonedImage);
+    });
 
-let scrollSpeed = 0.5;
-let scrollPosition = 0;
-let isPaused = false;
+    let scrollPosition = 0;
+    let isPaused = false;
+    const totalWidth = Array.from(images).reduce((width, img) => width + img.width, 0);
 
-function scrollImages() {
-    if (!isPaused) {
-        scrollPosition += scrollSpeed;
-        imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
+    function scrollImages() {
+        if (!isPaused) {
+            scrollPosition += scrollSpeed;
+            imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
 
-        if (scrollPosition >= originalImage.width) {
-            scrollPosition = 0;
-            imageContainer.style.transform = `translateX(0)`;
+            if (scrollPosition >= totalWidth) {
+                scrollPosition = 0;
+                imageContainer.style.transform = `translateX(0)`;
+            }
         }
+
+        requestAnimationFrame(scrollImages);
     }
-
-    requestAnimationFrame(scrollImages);
+    scrollImages();
+    
 }
 
-function pauseScroll() {
-    isPaused = true;
-}
-
-function resumeScroll() {
-    isPaused = false; 
-}
-
-scrollImages();
+const container1 = createScrollEffect('scrollContainer1', 'imageContainer1', 0.5);
+const container2 = createScrollEffect('scrollContainer2', 'imageContainer2', 0.5);
+const container3 = createScrollEffect('scrollContainer3', 'imageContainer3', 0.5);

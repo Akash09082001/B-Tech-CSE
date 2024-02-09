@@ -4,7 +4,7 @@ var swiperOptions = {
     loop: true,
     spaceBetween: 10,
     grabCursor: false,
-    slidesPerView: 4,
+    slidesPerView: 6,
     loop: true,
     autoplay: {
         delay: 1,
@@ -20,11 +20,11 @@ var swiperOptions = {
             spaceBetween: 10,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 4,
             spaceBetween: 10,
         },
         1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 10,
         },
     },
@@ -122,3 +122,5 @@ function isInHeroSection(element, heroSection) {
     buttonRect.right <= heroRect.right
   );
 }
+
+
