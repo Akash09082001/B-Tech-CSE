@@ -15,20 +15,22 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
     function scrollImages() {
         if (!isPaused) {
             scrollPosition += scrollSpeed;
-            imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
 
             if (scrollPosition >= totalWidth) {
-                scrollPosition = 0;
-                imageContainer.style.transform = `translateX(0)`;
+                scrollPosition -= totalWidth; // Adjust the scroll position for a seamless loop
             }
+
+            imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
         }
 
         requestAnimationFrame(scrollImages);
     }
+
+    // Start the animation loop for this specific container
     scrollImages();
-    
 }
 
-const container1 = createScrollEffect('scrollContainer1', 'imageContainer1', 0.5);
-const container2 = createScrollEffect('scrollContainer2', 'imageContainer2', 0.5);
-const container3 = createScrollEffect('scrollContainer3', 'imageContainer3', 0.5);
+// Create separate instances for each scroll container
+const container1 = createScrollEffect('scrollContainer1', 'imageContainer1', 0.7);
+const container2 = createScrollEffect('scrollContainer2', 'imageContainer2', 0.7);
+const container3 = createScrollEffect('scrollContainer3', 'imageContainer3', 0.7);
