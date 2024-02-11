@@ -91,6 +91,11 @@
     animation-delay: 2s;
 }
 
+.newsletter-container-none {
+    @apply flex gap-5 items-center justify-center whitespace-nowrap;
+    animation: none;
+}
+
 .newsletter-item {
     @apply flex w-fit h-6 text-white;
 }
@@ -151,3 +156,9 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(62,62,62,1) 47%, rgba(
     transform: rotate(0deg);
     transition: transform 0.5s ease-in-out;
 }
+
+.text-stroke {
+    color: white; 
+    -webkit-text-stroke: 1px #a91d53; 
+    text-stroke: 1px #a91d53; 
+  }

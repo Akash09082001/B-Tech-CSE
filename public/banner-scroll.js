@@ -33,4 +33,3 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
 // Create separate instances for each scroll container
 const container1 = createScrollEffect('scrollContainer1', 'imageContainer1', 0.7);
 const container2 = createScrollEffect('scrollContainer2', 'imageContainer2', 0.7);
-const container3 = createScrollEffect('scrollContainer3', 'imageContainer3', 0.7);
