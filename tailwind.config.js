@@ -89,7 +89,7 @@ module.exports = {
         // "text": "url('assets/banner-img/text-bg.png')",
         "text": "url('assets/banner-img/text-bg1.jpg')",
         "linear-graph": "url('assets/banner-img/graph-3.webp')",
-        "boa-banner": "url('assets/banner-img/boa-banner.webp')",
+        "boa-banner": "url('assets/banner-img/boa-banner1.webp')",
         "lisa": "url('assets/banner-img/lisa image.webp')",
         "footer-banner": "url('assets/banner-img/footer-banner.webp')",
         "deco-mob": "url('assets/banner-img/decorative-mob.webp')",

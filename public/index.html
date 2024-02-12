@@ -173,17 +173,17 @@
             <div class="flex flex-col w-full md:py-5 lg:py-8 gap-5">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 w-full max-w-7xl mx-auto">
-                    <div class="flex w-full md:order-2 ">
+                    <div class="flex relative w-full h-fit md:order-2 ">
                         <div class="flex relative w-fit h-fit my-auto md:rounded-md">
                             <video id="myVideo" class="flex aspect-video h-fit w-full md:w-fit md:rounded-md" muted loop
                                 playsinline>
                                 <source src="assets/video/herovideo.mp4" type="video/mp4" />
                             </video>
-                            <div id="videoImg" onclick="playVideo()"
-                                class="flex absolute aspect-video w-full md:w-fit md:rounded-md">
-                                <img src="assets/video/video-banner.webp" alt="video-banner"
-                                    class="flex w-full h-full object-contain">
-                            </div>
+                        </div>
+                        <div id="videoImg" onclick="playVideo()"
+                            class="flex absolute aspect-video w-full md:w-fit md:rounded-md">
+                            <img src="assets/video/video-banner.webp" alt="video-banner"
+                                class="flex w-full h-full object-contain">
                         </div>
                     </div>
                     <div class="flex flex-col gap-3 md:gap-4 w-full px-5 md:px-0 md:order-1">
@@ -1099,10 +1099,10 @@
                                 class="flex text-white gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
                                 <span class="flex w-10 h-10 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1" stroke="currentColor" class="w-10 h-10">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-                                        </svg>
+                                        stroke-width="1" stroke="currentColor" class="w-10 h-10">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                                    </svg>
                                 </span>
                                 <strong class="text-xl font-extrabold text-stroke"> Holistic Program</strong>
                                 <span class="text-center">Tech, Business ,and Softskills Integrated</span>
@@ -1118,10 +1118,10 @@
                                 class="flex text-white gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
                                 <span class="flex w-10 h-10 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1" stroke="currentColor" class="w-10 h-10">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-                                        </svg>
+                                        stroke-width="1" stroke="currentColor" class="w-10 h-10">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                                    </svg>
                                 </span>
                                 <strong class="text-xl font-extrabold text-stroke">Exclusive Admission</strong>
                                 <span class="text-center">Seeking 40 Exceptional Individuals</span>
@@ -1137,10 +1137,10 @@
                                 class="flex text-white gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
                                 <span class="flex w-10 h-10 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1" stroke="currentColor" class="w-10 h-10">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-                                        </svg>
+                                        stroke-width="1" stroke="currentColor" class="w-10 h-10">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                                    </svg>
                                 </span>
                                 <strong class="text-xl font-extrabold text-stroke">Eligibility</strong>
                                 <span class="text-center">12th Grade Completion Required with 60%</span>
@@ -1971,6 +1971,14 @@
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-1.webp" alt="">
                             </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
                         </article>
 
                         <article class="flex flex-col gap-3 w-80 max-w-xs ">
@@ -2039,6 +2047,14 @@
                             </div>
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-2.webp" alt="">
+                            </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
                             </div>
                         </article>
 
@@ -2109,6 +2125,14 @@
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-3.webp" alt="">
                             </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
                         </article>
 
                         <article class="flex flex-col gap-3 w-80 max-w-xs ">
@@ -2175,6 +2199,14 @@
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-4.webp" alt="">
                             </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
                         </article>
 
                         <article class="flex flex-col gap-3 w-80 max-w-xs ">
@@ -2208,6 +2240,92 @@
                             </div>
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-5.webp" alt="">
+                            </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="flex flex-col gap-3 w-80 max-w-xs ">
+                            <div class="flex w-full px-3">
+                                <strong class="text-gray-500 text-lg">SEMESTER 6</strong>
+                            </div>
+                            <div class="flex flex-col gap-5 h-425 w-full rounded-lg bg-black p-5">
+                                <div class="flex w-full gap-2">
+                                    <span class="h-4 w-4 rounded-full bg-red-600"></span>
+                                    <span class="h-4 w-4 rounded-full bg-yellow-400"></span>
+                                    <span class="h-4 w-4 rounded-full bg-green-500"></span>
+                                </div>
+                                <div class="flex flex-col gap-3 w-full">
+                                    <code class="text-white text-sm">
+                                        < Semester 6 />
+                                    </code>
+                                    <code class="text-white text-xs">
+                                        "Create Mobile Apps and Manage Projects"
+                                    </code>
+                                    <div class="flex flex-col w-full gap-2">
+                                        <code class="flex text-sm flex-col w-full text-white">
+                                            < Tech Electives : /> 
+                                        </code>
+                                        <div class="flex flex-col text-xs w-full pl-2 gap-1 text-blue-200">
+                                            <code class="flex w-full ">
+                                                * Mobile App Development
+                                            </code>
+                                            <code class="flex w-full ">
+                                                * Project Management
+                                            </code>
+                                            <code class="flex w-full ">
+                                                * Product Management
+                                            </code>
+                                            <code class="flex w-full ">
+                                                * Trending AI tools- P5
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col w-full gap-2">
+                                        <code class="flex text-sm flex-col w-full text-white">
+                                            < Softskills: /> 
+                                        </code>
+                                        <div class="flex flex-col text-xs w-full pl-2 gap-1 text-blue-200">
+                                            <code class="flex w-full ">
+                                                * Business Communication
+                                            </code>
+                                            <code class="flex w-full ">
+                                                * Resume Building
+                                            </code>
+                                            <code class="flex w-full ">
+                                                * Finding Jobs
+                                            </code>
+
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col w-full gap-2">
+                                        <code class="flex text-sm flex-col w-full text-white">
+                                            < Business: /> 
+                                        </code>
+                                        <div class="flex flex-col text-xs w-full pl-2 gap-1 text-blue-200">
+                                            <code class="flex w-full ">
+                                                * HR, Accounts, Investments
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex w-full px-2">
+                                <img src="assets/curriculum-logo/sem-5.webp" alt="">
+                            </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
                             </div>
                         </article>
 
@@ -2266,6 +2384,14 @@
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-7.webp" alt="">
                             </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
                         </article>
 
                         <article class="flex flex-col gap-3 w-80 max-w-xs ">
@@ -2311,6 +2437,14 @@
                             <div class="flex w-full px-2">
                                 <img src="assets/curriculum-logo/sem-8.webp" alt="">
                             </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex w-full">
+                                    <span class="text-sm">PROJECTS :</span>
+                                </div>
+                                <div class="flex w-full px-2">
+                                    <img src="assets/curriculum-logo/sem-1.webp" alt="">
+                                </div>
+                            </div>
                         </article>
 
                     </div>
@@ -2347,7 +2481,7 @@
                 <div class="flex w-full px-5 overflow-x-scroll card-scroll lg:overflow-x-hidden py-3">
                     <div class="flex w-fit justify-start gap-5 lg:mx-auto">
 
-                        <div class="flex w-80 border-2 border-gray-300 rounded-lg">
+                        <div class="flex w-80 border-2 border-gray-300 rounded-lg cursor-pointer">
                             <div
                                 class="cursor-container relative rounded-lg flex w-full h-52 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
                                 <span
@@ -2365,7 +2499,7 @@
                             </div>
                         </div>
 
-                        <div class="flex w-80 border-2 border-gray-300 rounded-lg">
+                        <div class="flex w-80 border-2 border-gray-300 rounded-lg cursor-pointer">
                             <div
                                 class="cursor-container relative rounded-lg flex w-full h-52 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
                                 <span
@@ -2382,7 +2516,7 @@
                             </div>
                         </div>
 
-                        <div class="flex w-80 border-2 border-gray-300 rounded-lg">
+                        <div class="flex w-80 border-2 border-gray-300 rounded-lg cursor-pointer">
                             <div
                                 class="cursor-container relative rounded-lg flex w-full h-52 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
                                 <span
@@ -2403,9 +2537,9 @@
                 </div>
 
                 <div class="flex w-full overflow-x-scroll px-5 md:px-0 py-3 card-scroll">
-                    <div class="flex w-auto gap-3 justify-start">
+                    <div id="boa-container" class="flex w-auto gap-3 justify-start">
 
-                        <div class="flex flex-col w-52  rounded-2xl">
+                        <!-- <div class="flex flex-col w-52  rounded-2xl">
                             <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
                                 <img src="assets/Board-of-advisor/Asim Malik.webp" alt="Asim Malik" srcset=""
                                     class="flex w-full h-full object-cover rounded-2xl">
@@ -2418,148 +2552,7 @@
                                         class="flex h-full w-fit object-center object-contain" alt="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Abhjit Petkar.webp" alt="Abhjit Petkar" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">ABHIJIT PETKAR</strong>
-                                <p class="text-xs">CTO</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Abhjit-Petkar.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Ajay Maru.webp" alt="Ajay Maru" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">AJAY MARU</strong>
-                                <p class="text-xs">CTO</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Ajay-Maru.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Ankush Gorav.webp" alt="Ankush Gorav" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">ANKUSH GORAV</strong>
-                                <p class="text-xs">VP of Engineering</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Ankush-Gorav.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Anshuman Bhaduri.webp" alt="Anshuman Bhaduri"
-                                    srcset="" class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">ANSHUMAN BHADURI</strong>
-                                <p class="text-xs">The Board of Advisors : ThinkRisk</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Anshuman-Bhaduri.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Faiz Malkani.webp" alt="Faiz Malkani" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">FAIZ MALKANI</strong>
-                                <p class="text-xs">Founding Organizer</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Faiz-Malkani.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Mukesh Marfatia.webp" alt="Mukesh Marfatia" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">MUKESH MARFATIA</strong>
-                                <p class="text-xs">EVP Corporate Strategy</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Mukesh-Marfatia.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Shailendra Sawant.webp" alt="Shailendra Sawant"
-                                    srcset="" class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">SHAILENDRA SAWANT</strong>
-                                <p class="text-xs">CTO
-                                </p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Shailendra-Sawant.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Varun Raj.webp" alt="Varun Raj" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">VARUN RAJ</strong>
-                                <p class="text-xs">Google Developer Expert</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Varun-Raj.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Vishal Dubey.webp" alt="Vishal Dubey" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">VISHAL DUBEY</strong>
-                                <p class="text-xs">Chief Technology Evangelist</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Vishal-Dubey.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52  rounded-2xl">
-                            <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-                                <img src="assets/Board-of-advisor/Vivek yadav.webp" alt="Vivek Yadav" srcset=""
-                                    class="flex w-full h-full object-cover rounded-2xl">
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-2 py-3">
-                                <strong class="text-base text-brand-red font-bold py-2">VIVEK YADAV</strong>
-                                <p class="text-xs">Google Developer Expert</p>
-                                <div class="flex h-12 w-fit mx-auto">
-                                    <img src="assets/Board-of-advisor/company-logo/Vivek-yadav.webp"
-                                        class="flex h-full w-fit object-center object-contain" alt="">
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -2701,11 +2694,11 @@
                     <div class="flex overflow-x-hidden card-scroll1 w-full" id="scrollContainer2">
                         <div class="flex w-auto justify-start">
                             <div class="flex w-[1720px] gap-4" id="imageContainer2">
-                                <img src="assets/banner-img/INDUSTRY TALKS.webp" alt="">
+                                <img src="assets/banner-img/ba.webp" alt="">
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="flex w-full overflow-x-scroll lg:overflow-x-hidden card-scroll py-3">
@@ -2786,7 +2779,7 @@
                         <strong class="text-lg md:text-xl lg:text-2xl mx-auto text-white">
                             EVENTS
                         </strong>
-                    </div> 
+                    </div>
                     <div class="flex w-full overflow-x-scroll pb-3 card-scroll ">
                         <div class="flex w-fit gap-5">
 
@@ -3144,26 +3137,34 @@
                             GLOBAL IMMERSION PROGRAM
                         </h2>
                     </div>
-    
+
                     <div class="flex w-full overflow-x-scroll md:overflow-x-hidden card-scroll">
                         <div class="flex w-fit md:w-full md:grid md:grid-cols-1 lg:grid-cols-2 gap-5 justify-start">
 
-                            <div class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
-                                <img src="assets/global-immersion-img/gip-1.webp" alt="" class="flex w-full h-full object-contain rounded-md">
+                            <div
+                                class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
+                                <img src="assets/global-immersion-img/gip-1.webp" alt=""
+                                    class="flex w-full h-full object-contain rounded-md">
                             </div>
-                            <div class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
-                                <img src="assets/global-immersion-img/gip-2.webp" alt="" class="flex w-full h-full object-contain rounded-md">
+                            <div
+                                class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
+                                <img src="assets/global-immersion-img/gip-2.webp" alt=""
+                                    class="flex w-full h-full object-contain rounded-md">
                             </div>
-                            <div class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
-                                <img src="assets/global-immersion-img/gip-3.webp" alt="" class="flex w-full h-full object-contain rounded-md">
+                            <div
+                                class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
+                                <img src="assets/global-immersion-img/gip-3.webp" alt=""
+                                    class="flex w-full h-full object-contain rounded-md">
                             </div>
-                            <div class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
-                                <img src="assets/global-immersion-img/gip-4.webp" alt="" class="flex w-full h-full object-contain rounded-md">
+                            <div
+                                class="flex w-80 md:w-full rounded-md border border-brand-yellow shadow-md shadow-brand-yellow">
+                                <img src="assets/global-immersion-img/gip-4.webp" alt=""
+                                    class="flex w-full h-full object-contain rounded-md">
                             </div>
 
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto">
@@ -3300,9 +3301,29 @@
             </div>
         </section>
 
+        <section id="Student Testimonials" class="flex w-full">
+            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">
+
+                <div class="flex w-full">
+                    <h2
+                        class="flex text-2xl md:text-3xl font-bold items-center justify-center w-full underline underline-offset-4 decoration-brand-red decoration-4">
+                        STUDENT TESTIMONIALS
+                    </h2>
+
+                </div>
+
+                <div class="flex w-full overflow-x-scroll card-scroll py-3">
+                    <div id="data-container" class="flex w-auto gap-3 md:gap-5 md:w-fit md:mx-auto justify-start">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section id="Admission process" class="flex w-full">
-            <div
-                class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">
+            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">
 
                 <div class="flex gap-5 flex-col w-full">
                     <h2
@@ -3317,106 +3338,120 @@
                 </div>
 
                 <div class="flex w-full overflow-x-scroll md:overflow-x-hidden card-scroll py-3">
-                    <div class="flex w-auto gap-3 md:gap-5 md:w-fit md:mx-auto justify-start">
 
-                        <div class="flex flex-col w-52 gap-2">
-                            <div class="flex w-full">
-                                <strong class="flex w-full text-gray-500 font-bold">STEP 1</strong>
-                            </div>
+
+                    <div class="flex w-auto justify-start gap-5 xl:w-full xl:justify-between">
+
+                        <div
+                            class="cursor-container relative rounded-lg flex w-72 hover:shadow-md border border-gray-300 xl:w-full max-w-xs h-48 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
+                            <span
+                                class="cursor absolute h-24 w-24 transition-all cursor-none rounded-full bg-brand-yellow blur-2xl"></span>
+
                             <div
-                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
-                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
-                                    <div class="flex w-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="86" height="89"
-                                            viewBox="0 0 86 89" fill="none">
-                                            <path
-                                                d="M35.5882 11.2353H10.8824C5.42448 11.2353 1 15.8178 1 21.4706V77.7647C1 83.4175 5.42448 88 10.8824 88H65.2353C70.6932 88 75.1177 83.4175 75.1177 77.7647V52.1765M68.1298 3.99785C71.9891 0.000717689 78.2462 0.000717689 82.1055 3.99785C85.9648 7.99498 85.9648 14.4756 82.1055 18.4727L39.6816 62.4118H25.7059L25.7059 47.9369L68.1298 3.99785Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                    <div class="flex w-full justify-end">
-                                        <span class="flex text-white">Application Form</span>
-                                    </div>
-                                </div>
+                                class="flex gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
+                                <span class="flex w-10 h-10 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90"
+                                        fill="none">
+                                        <path
+                                            d="M35.5882 11.2353H10.8824C5.42448 11.2353 1 15.8178 1 21.4706V77.7647C1 83.4175 5.42448 88 10.8824 88H65.2353C70.6932 88 75.1177 83.4175 75.1177 77.7647V52.1765M68.1298 3.99785C71.9891 0.000717689 78.2462 0.000717689 82.1055 3.99785C85.9648 7.99498 85.9648 14.4756 82.1055 18.4727L39.6816 62.4118H25.7059L25.7059 47.9369L68.1298 3.99785Z"
+                                            stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <strong class="text-lg font-extrabold"> 
+                                    <code>
+                                        < STEP 1 >
+                                    </code>
+                                </strong>
+                                <span class="text-center">Application Form</span>
                             </div>
                         </div>
-                        <div class="flex flex-col w-52 gap-2">
-                            <div class="flex w-full">
-                                <strong class="flex w-full text-gray-500 font-bold">STEP 2</strong>
-                            </div>
+
+                        <div
+                            class="cursor-container relative rounded-lg flex w-72 hover:shadow-md border border-gray-300 xl:w-full max-w-xs h-48 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
+                            <span
+                                class="cursor absolute h-24 w-24 transition-all cursor-none rounded-full bg-brand-yellow blur-2xl"></span>
+
                             <div
-                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
-                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
-                                    <div class="flex w-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="92" height="94"
-                                            viewBox="0 0 92 94" fill="none">
-                                            <rect width="92" height="94" fill="white" />
-                                            <path
-                                                d="M46 17.0539C48.8096 13.8014 52.9204 11.75 57.5 11.75C65.9684 11.75 72.8333 18.7642 72.8333 27.4167C72.8333 36.0691 65.9684 43.0833 57.5 43.0833C52.9203 43.0833 48.8096 41.032 46 37.7795M57.5 82.25H11.5V78.3333C11.5 65.3546 21.7975 54.8333 34.5 54.8333C47.2025 54.8333 57.5 65.3546 57.5 78.3333V82.25ZM57.5 82.25H80.5V78.3333C80.5 65.3546 70.2026 54.8333 57.5 54.8333C53.3107 54.8333 49.383 55.9777 46 57.9772M49.8333 27.4167C49.8333 36.0691 42.9684 43.0833 34.5 43.0833C26.0316 43.0833 19.1667 36.0691 19.1667 27.4167C19.1667 18.7642 26.0316 11.75 34.5 11.75C42.9684 11.75 49.8333 18.7642 49.8333 27.4167Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                    <div class="flex w-full justify-end">
-                                        <span class="flex text-white">1:1 Interview</span>
-                                    </div>
-                                </div>
+                                class="flex gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
+                                <span class="flex w-10 h-10 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90"
+                                        fill="none">
+                                        <rect width="92" height="94" fill="white" />
+                                        <path
+                                            d="M46 17.0539C48.8096 13.8014 52.9204 11.75 57.5 11.75C65.9684 11.75 72.8333 18.7642 72.8333 27.4167C72.8333 36.0691 65.9684 43.0833 57.5 43.0833C52.9203 43.0833 48.8096 41.032 46 37.7795M57.5 82.25H11.5V78.3333C11.5 65.3546 21.7975 54.8333 34.5 54.8333C47.2025 54.8333 57.5 65.3546 57.5 78.3333V82.25ZM57.5 82.25H80.5V78.3333C80.5 65.3546 70.2026 54.8333 57.5 54.8333C53.3107 54.8333 49.383 55.9777 46 57.9772M49.8333 27.4167C49.8333 36.0691 42.9684 43.0833 34.5 43.0833C26.0316 43.0833 19.1667 36.0691 19.1667 27.4167C19.1667 18.7642 26.0316 11.75 34.5 11.75C42.9684 11.75 49.8333 18.7642 49.8333 27.4167Z"
+                                            stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <strong class="text-lg font-extrabold"> 
+                                    <code>
+                                        < STEP 2 >
+                                    </code>
+                                </strong>
+                                <span class="text-center">1:1 Interview</span>
                             </div>
                         </div>
-                        <div class="flex flex-col w-52 gap-2">
-                            <div class="flex w-full">
-                                <strong class="flex w-full text-gray-500 font-bold">STEP 3</strong>
-                            </div>
+
+                        <div
+                            class="cursor-container relative rounded-lg flex w-72 hover:shadow-md border border-gray-300 xl:w-full max-w-xs h-48 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
+                            <span
+                                class="cursor absolute h-24 w-24 transition-all cursor-none rounded-full bg-brand-yellow blur-2xl"></span>
+
                             <div
-                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
-                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
-                                    <div class="flex w-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="91" height="93"
-                                            viewBox="0 0 91 93" fill="none">
+                                class="flex gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
+                                <span class="flex w-10 h-10 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                            viewBox="0 0 90 90" fill="none">
                                             <path
                                                 d="M41.707 15.5C41.707 11.2198 45.1022 7.75 49.2904 7.75C53.4785 7.75 56.8737 11.2198 56.8737 15.5V19.375C56.8737 21.5151 58.5713 23.25 60.6654 23.25H72.0404C74.1344 23.25 75.832 24.9849 75.832 27.125V38.75C75.832 40.8901 74.1344 42.625 72.0404 42.625H68.2487C64.0605 42.625 60.6654 46.0948 60.6654 50.375C60.6654 54.6552 64.0605 58.125 68.2487 58.125H72.0404C74.1344 58.125 75.832 59.8599 75.832 62V73.625C75.832 75.7651 74.1344 77.5 72.0404 77.5H60.6654C58.5713 77.5 56.8737 75.7651 56.8737 73.625V69.75C56.8737 65.4698 53.4785 62 49.2904 62C45.1022 62 41.707 65.4698 41.707 69.75V73.625C41.707 75.7651 40.0094 77.5 37.9154 77.5H26.5404C24.4463 77.5 22.7487 75.7651 22.7487 73.625V62C22.7487 59.8599 21.0511 58.125 18.957 58.125H15.1654C10.9772 58.125 7.58203 54.6552 7.58203 50.375C7.58203 46.0948 10.9772 42.625 15.1654 42.625H18.957C21.0511 42.625 22.7487 40.8901 22.7487 38.75V27.125C22.7487 24.9849 24.4463 23.25 26.5404 23.25H37.9154C40.0094 23.25 41.707 21.5151 41.707 19.375V15.5Z"
-                                                stroke="#A91D54" stroke-width="2" stroke-linecap="round"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
                                                 stroke-linejoin="round" />
                                         </svg>
-                                    </div>
-                                    <div class="flex w-full justify-end">
-                                        <span class="flex text-white">CTO Challenge</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col w-52 gap-2">
-                            <div class="flex w-full">
-                                <strong class="flex w-full text-gray-500 font-bold">STEP 4</strong>
-                            </div>
-                            <div
-                                class="add-box relative overflow-hidden h-52 flex w-full rounded-xl border border-gray-300 bg-brand-red before:flex before:absolute before:h-52 before:w-52 before:bg-white before:rounded-full before:-top-1/4 before:-left-1/4">
-                                <div class="flex flex-col w-full justify-between py-5 px-5 h-full absolute">
-                                    <div class="flex w-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="87"
-                                            viewBox="0 0 85 87" fill="none">
-                                            <path
-                                                d="M84 43.5C84 66.9942 65.398 86 42.5 86C19.602 86 1 66.9942 1 43.5C1 20.0058 19.602 1 42.5 1C65.398 1 84 20.0058 84 43.5ZM62.9093 37.1687C65.3636 34.6567 65.3636 30.5933 62.9093 28.0813C60.4423 25.5562 56.4327 25.5562 53.9657 28.0813L37.1875 45.2543L31.0343 38.9563C28.5673 36.4312 24.5577 36.4312 22.0907 38.9563C19.6364 41.4683 19.6364 45.5317 22.0907 48.0437L32.7157 58.9187C35.1827 61.4438 39.1923 61.4438 41.6593 58.9187L62.9093 37.1687Z"
-                                                stroke="#A91D54" stroke-width="2" />
-                                        </svg>
-                                    </div>
-                                    <div class="flex w-full justify-end">
-                                        <span class="flex text-white">Enrollment</span>
-                                    </div>
-                                </div>
+                                </span>
+                                <strong class="text-lg font-extrabold"> 
+                                    <code>
+                                        < STEP 3 >
+                                    </code>
+                                </strong>
+                                <span class="text-center">CTO Challenge</span>
                             </div>
                         </div>
 
+                        <div
+                            class="cursor-container relative rounded-lg flex w-72 hover:shadow-md border border-gray-300 xl:w-full max-w-xs h-48 bg-white overflow-hidden backdrop-blur-2xl bg-opacity-15">
+                            <span
+                                class="cursor absolute h-24 w-24 transition-all cursor-none rounded-full bg-brand-yellow blur-2xl"></span>
+
+                            <div
+                                class="flex gap-4 items-center justify-center flex-col p-5 w-full h-full absolute z-10">
+                                <span class="flex w-10 h-10 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 90 90" fill="none">
+                                            <path
+                                                d="M84 43.5C84 66.9942 65.398 86 42.5 86C19.602 86 1 66.9942 1 43.5C1 20.0058 19.602 1 42.5 1C65.398 1 84 20.0058 84 43.5ZM62.9093 37.1687C65.3636 34.6567 65.3636 30.5933 62.9093 28.0813C60.4423 25.5562 56.4327 25.5562 53.9657 28.0813L37.1875 45.2543L31.0343 38.9563C28.5673 36.4312 24.5577 36.4312 22.0907 38.9563C19.6364 41.4683 19.6364 45.5317 22.0907 48.0437L32.7157 58.9187C35.1827 61.4438 39.1923 61.4438 41.6593 58.9187L62.9093 37.1687Z"
+                                                stroke="currentColor" stroke-width="4" />
+                                        </svg>
+                                </span>
+                                <strong class="text-lg font-extrabold"> 
+                                    <code>
+                                        < STEP 4 >
+                                    </code>
+                                </strong>
+                                <span class="text-center">Enrollment</span>
+                            </div>
+                        </div>
+
+
                     </div>
+                    
                 </div>
 
             </div>
         </section>
 
         <section id="FAQ" class="flex w-full">
-            <div
-                class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">
+            <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">
 
                 <div class="flex w-full">
                     <h2
@@ -3790,6 +3825,8 @@
     </footer>
 
     <script src="card-animate.js"></script>
+    <script src="boa.js"></script>
+    <script src="student-testimonials.js"></script>
     <script src="banner-scroll.js"></script>
     <script src="utm.js"></script>
     <script src="main.js"></script>

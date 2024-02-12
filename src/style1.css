@@ -139,8 +139,8 @@
 }
 
 .box-gradient4 {
-    background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(62,62,62,1) 47%, rgba(255,255,255,0) 92%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 22%, rgba(62, 62, 62, 1) 47%, rgba(255, 255, 255, 0) 92%);
 }
 
 .add-box::before {
@@ -158,7 +158,11 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(62,62,62,1) 47%, rgba(
 }
 
 .text-stroke {
-    color: white; 
-    -webkit-text-stroke: 1px #a91d53; 
-    text-stroke: 1px #a91d53; 
-  }
+    color: white;
+    -webkit-text-stroke: 1px #a91d53;
+    text-stroke: 1px #a91d53;
+}
+
+.st-gradient{
+    @apply bg-gradient-to-b from-brand-red via-brand-red to-transparent;
+}
