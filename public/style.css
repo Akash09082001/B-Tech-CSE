@@ -1425,6 +1425,10 @@ video {
   overflow-x: scroll;
 }
 
+.scroll-smooth{
+  scroll-behavior: smooth;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -2068,6 +2072,10 @@ video {
 
 .font-normal{
   font-weight: 400;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .uppercase{
@@ -2748,6 +2756,18 @@ video {
     width: 100%;
   }
 
+  .md\:w-\[600px\]{
+    width: 600px;
+  }
+
+  .md\:w-\[700px\]{
+    width: 700px;
+  }
+
+  .md\:w-\[800px\]{
+    width: 800px;
+  }
+
   .md\:max-w-lg{
     max-width: 32rem;
   }
@@ -2877,6 +2897,11 @@ video {
     padding-right: 1.25rem;
   }
 
+  .md\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -2984,6 +3009,11 @@ video {
     padding-right: 0px;
   }
 
+  .lg\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .lg\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -3048,6 +3078,11 @@ video {
     overflow-x: hidden;
   }
 
+  .xl\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .xl\:py-14{
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
@@ -3056,10 +3091,6 @@ video {
   .xl\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .xl\:pt-14{
-    padding-top: 3.5rem;
   }
 
   .xl\:text-2xl\+{
