@@ -143,14 +143,14 @@ function showBoaData(boaData) {
     let listCard = `
     <div class="flex flex-col w-52  rounded-2xl">
         <div class="flex w-full shadow-md bg-brand-yellow rounded-2xl">
-            <img src=${boaData.img} alt=${boaData.name}
-                class="flex w-full h-full object-cover rounded-2xl">
+            <img loading="lazy" src=${boaData.img} alt=${boaData.name}
+                class="flex w-full h-full object-cover rounded-2xl grayscale">
         </div>
         <div class="flex flex-col items-center justify-center gap-2 py-3">
             <strong class="text-base text-brand-red font-bold py-2">${boaData.name}</strong>
             <p class="text-xs">${boaData.position}</p>
             <div class="flex h-12 w-fit mx-auto">
-                <img src=${boaData.logo}
+                <img loading="lazy" src=${boaData.logo}
                     class="flex h-full w-fit object-center object-contain" alt=${boaData.name}>
             </div>
         </div>

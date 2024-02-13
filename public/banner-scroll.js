@@ -2,7 +2,6 @@
 createScrollEffect('scrollContainer1', 'imageContainer1', 0.7);
 createScrollEffect('scrollContainer2', 'imageContainer2', 0.7);
 
-
 function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
     const scrollContainer = document.getElementById(scrollContainerId);
     const imageContainer = document.getElementById(imageContainerId);
@@ -19,7 +18,7 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
             scrollPosition += scrollSpeed;
 
             if (scrollPosition >= totalWidth) {
-                scrollPosition -= totalWidth;
+                scrollPosition = 0; // Reset to zero when it exceeds total width
             }
 
             imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
@@ -30,4 +29,3 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
 
     scrollImages(); // Start the animation loop for this specific container
 }
-
