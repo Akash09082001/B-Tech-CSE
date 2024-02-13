@@ -7,18 +7,23 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
     const imageContainer = document.getElementById(imageContainerId);
     const images = Array.from(imageContainer.querySelectorAll('img'));
 
-    images.forEach(image => imageContainer.appendChild(image.cloneNode(true)));
+    const totalWidth = images.reduce((width, img) => width + img.width, 0);
+
+    // Clone and append images for infinite loop
+    images.forEach(image => {
+        const clone = image.cloneNode(true);
+        imageContainer.appendChild(clone);
+    });
 
     let scrollPosition = 0;
     let isPaused = false;
-    const totalWidth = images.reduce((width, img) => width + img.width, 0);
 
     function scrollImages() {
         if (!isPaused) {
             scrollPosition += scrollSpeed;
 
             if (scrollPosition >= totalWidth) {
-                scrollPosition = 0; // Reset to zero when it exceeds total width
+                scrollPosition -= totalWidth;
             }
 
             imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
