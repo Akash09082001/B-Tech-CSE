@@ -9,10 +9,10 @@
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.03)'%3E%3Cpath d='M0 .5h31.5V32'/%3E%3C/svg%3E");
 }
 
-.card-scroll::-webkit-scrollbar {
+/* .card-scroll::-webkit-scrollbar {
     @apply h-1 w-2 !important;
-    /* -webkit-appearance: none; */
-    /* -webkit-overflow-scrolling: auto; */
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: auto;
 }
 
 .card-scroll1::-webkit-scrollbar {
@@ -27,8 +27,8 @@
 .card-scroll::-webkit-scrollbar-thumb {
     border-radius: 5px !important;
     background: #A91D54 !important;
-    /* -webkit-overflow-scrolling: auto; */
-}
+    -webkit-overflow-scrolling: auto;
+} */
 
 .btn {
     @apply flex h-fit w-fit px-5 py-2 rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;

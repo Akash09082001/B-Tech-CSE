@@ -2351,27 +2351,26 @@ video {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.03)'%3E%3Cpath d='M0 .5h31.5V32'/%3E%3C/svg%3E");
 }
 
-.card-scroll::-webkit-scrollbar{
-  height: 0.25rem !important;
-  width: 0.5rem !important;
-  /* -webkit-appearance: none; */
-  /* -webkit-overflow-scrolling: auto; */
+/* .card-scroll::-webkit-scrollbar {
+    @apply h-1 w-2 !important;
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: auto;
 }
 
-.card-scroll1::-webkit-scrollbar{
-  display: none;
+.card-scroll1::-webkit-scrollbar {
+    @apply hidden;
 }
 
 .card-scroll::-webkit-scrollbar-track {
-  background: #8888882e !important;
-  border-radius: 5px !important;
+    background: #8888882e !important;
+    border-radius: 5px !important;
 }
 
 .card-scroll::-webkit-scrollbar-thumb {
-  border-radius: 5px !important;
-  background: #A91D54 !important;
-  /* -webkit-overflow-scrolling: auto; */
-}
+    border-radius: 5px !important;
+    background: #A91D54 !important;
+    -webkit-overflow-scrolling: auto;
+} */
 
 .btn{
   margin-top: auto;
