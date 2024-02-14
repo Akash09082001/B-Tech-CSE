@@ -1150,10 +1150,6 @@ video {
   width: 1536px;
 }
 
-.w-\[1720px\]{
-  width: 1720px;
-}
-
 .w-\[90\%\]{
   width: 90%;
 }
@@ -1791,6 +1787,11 @@ video {
 .object-fill{
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+.object-bottom{
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .object-center{
@@ -2575,6 +2576,12 @@ video {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.brochure-banner-gradiant {
+  background: rgb(169, 29, 84);
+  background: radial-gradient(circle, rgba(169, 29, 84, 1) 0%, rgba(169, 29, 84, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a91d54", endColorstr="#ffffff", GradientType=1);
+}
+
 .before\:absolute::before{
   content: var(--tw-content);
   position: absolute;
@@ -2752,6 +2759,10 @@ video {
     width: 1rem;
   }
 
+  .md\:w-\[800px\]{
+    width: 800px;
+  }
+
   .md\:w-fit{
     width: -moz-fit-content;
     width: fit-content;
@@ -2759,18 +2770,6 @@ video {
 
   .md\:w-full{
     width: 100%;
-  }
-
-  .md\:w-\[600px\]{
-    width: 600px;
-  }
-
-  .md\:w-\[700px\]{
-    width: 700px;
-  }
-
-  .md\:w-\[800px\]{
-    width: 800px;
   }
 
   .md\:max-w-lg{
@@ -2900,11 +2899,6 @@ video {
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .md\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .md\:py-10{
