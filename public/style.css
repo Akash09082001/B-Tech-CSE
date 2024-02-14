@@ -2352,8 +2352,10 @@ video {
 }
 
 .card-scroll::-webkit-scrollbar{
-  height: 0.25rem;
-  width: 0.5rem;
+  height: 0.25rem !important;
+  width: 0.5rem !important;
+  -webkit-appearance: none;
+  -webkit-overflow-scrolling: auto;
 }
 
 .card-scroll1::-webkit-scrollbar{
@@ -2361,13 +2363,14 @@ video {
 }
 
 .card-scroll::-webkit-scrollbar-track {
-  background: #8888882e;
-  border-radius: 5px;
+  background: #8888882e !important;
+  border-radius: 5px !important;
 }
 
 .card-scroll::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: #A91D54;
+  border-radius: 5px !important;
+  background: #A91D54 !important;
+  -webkit-overflow-scrolling: auto;
 }
 
 .btn{
