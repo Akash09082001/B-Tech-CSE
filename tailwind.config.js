@@ -58,6 +58,7 @@ module.exports = {
       height: {
         13: "50px",
         300: "300px",
+        350: "350px",
         360: "360px",
         370: "370px",
         380: "380px",
@@ -67,6 +68,10 @@ module.exports = {
         500: "500px",
         820: "820px"
       },
+      spacing: {
+        '13': '50px',
+        '15': '60px',
+      },
       aspectRatio: {
         "16/9": "960 / 540",
         "4/3": "640 / 480",
@@ -75,14 +80,13 @@ module.exports = {
         "2xl+": ["28px", "34px"],
         "4xl+": ["36px", "40px"],
         "5xl+": ["54px", "1"],
-      
       },
       textUnderlineOffset: {
         6: "6px",
       },
       fontFamily: {
-        "EB-Garamond": ["EB Garamond", "serif"],
         "caveat": ["Caveat", "cursive"],
+        "inter": ["Inter", "sans-serif"],
       },
       backgroundImage: {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
