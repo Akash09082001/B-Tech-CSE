@@ -1007,6 +1007,10 @@ video {
   height: 18rem;
 }
 
+.h-720{
+  height: 720px;
+}
+
 .h-8{
   height: 2rem;
 }
@@ -1786,6 +1790,10 @@ video {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.bg-\[length\:auto_200px\]{
+  background-size: auto 200px;
+}
+
 .bg-\[length\:auto_40\%\]{
   background-size: auto 40%;
 }
@@ -1796,14 +1804,6 @@ video {
 
 .bg-cover{
   background-size: cover;
-}
-
-.bg-\[length\:auto_300px\]{
-  background-size: auto 300px;
-}
-
-.bg-\[length\:auto_200px\]{
-  background-size: auto 200px;
 }
 
 .bg-fixed{
@@ -2754,8 +2754,19 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:divide-x > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--tw-divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
   .sm\:text-lg{
