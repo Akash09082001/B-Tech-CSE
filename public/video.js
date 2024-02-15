@@ -6,3 +6,8 @@ const playVideo=()=>{
     videoBanner.style.display = "none";
     myVideo.play();
 }
+const ringVideo = document.getElementById("ringVideo");
+
+window.addEventListener('load', () => {
+    ringVideo.play();
+});
