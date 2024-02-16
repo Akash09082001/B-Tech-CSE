@@ -89,17 +89,24 @@ dataCards.innerHTML = output;
 
 function showData(studentsTSData) {
     let listCard = `
-    <div class="flex relative w-80 h-350 st-gradient rounded-lg border border-gray-300">
-        <div class="flex flex-col text-white gap-2 w-full p-5">
-            <p class="text-justify text-xs">
-                “${studentsTSData.speack}"
-            </p>
-            <strong class="text-xs font-semibold">- ${studentsTSData.name}</strong>
-        </div>
-        <div class="flex absolute bottom-0 right-3 h-48 w-fit">
-            <img src=${studentsTSData.sTSImg} alt=${studentsTSData.name}>
-        </div>
-    </div>
+        <article class="flex flex-col gap-3 h-280 w-80 rounded-md p-5 bg-white border border-gray-300">
+            <div class="flex w-full gap-3">
+                <div class="flex w-13 h-13 items-center justify-center rounded-full bg-brand-yellow shimmer-effect1">
+                    <img loading="lazy" src=${studentsTSData.sTSImg} alt=${studentsTSData.name}
+                        class="flex h-full w-full object-contain object-bottom rounded-full">
+                </div>
+                <div class="flex w-fit items-center">
+                    <strong class="text-sm">
+                        ${studentsTSData.name}
+                    </strong>
+                </div>
+            </div>
+            <div class="flex w-full">
+                <p class="text-xs leading-5 text-justify">
+                    " ${studentsTSData.speack} "
+                </p>
+            </div>
+        </article>                       
     `;
     return listCard;
 }

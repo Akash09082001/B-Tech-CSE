@@ -32,7 +32,7 @@
 }
 
 .btn {
-    @apply flex h-fit w-fit px-5 py-2 rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;
+    @apply flex h-fit w-fit px-5 py-2 text-sm md:text-base rounded-md text-white bg-brand-red my-auto transition-all hover:bg-black hover:text-white shimmer-effect1;
 }
 
 .shimmer-effect {
@@ -178,3 +178,5 @@
     background: radial-gradient(circle, rgba(169, 29, 84, 1) 0%, rgba(169, 29, 84, 1) 0%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a91d54", endColorstr="#ffffff", GradientType=1);
 }
+
+

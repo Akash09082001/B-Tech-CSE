@@ -123,4 +123,3 @@ function isInHeroSection(element, heroSection) {
   );
 }
 
-
