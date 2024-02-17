@@ -90,6 +90,7 @@ module.exports = {
       fontFamily: {
         "caveat": ["Caveat", "cursive"],
         "inter": ["Inter", "sans-serif"],
+        'hm-sans': ['HM Sans Regular', 'sans-serif'],
       },
       backgroundImage: {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
