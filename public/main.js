@@ -2,9 +2,9 @@
 // swiper js
 var swiperOptions = {
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 8,
     grabCursor: false,
-    slidesPerView: 6,
+    slidesPerView: 10,
     loop: true,
     autoplay: {
         delay: 1,
@@ -16,16 +16,16 @@ var swiperOptions = {
     freeModeMomentum: true,
     breakpoints: {
         640: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 4,
+            spaceBetween: 8,
         },
         768: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 6,
+            spaceBetween: 8,
         },
         1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 8,
+            spaceBetween: 8,
         },
     },
 };
