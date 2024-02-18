@@ -2986,6 +2986,14 @@ video {
     height: 100vh;
   }
 
+  .md\:h-40{
+    height: 10rem;
+  }
+
+  .md\:h-80{
+    height: 20rem;
+  }
+
   .md\:max-h-\[720px\]{
     max-height: 720px;
   }
@@ -3142,8 +3150,16 @@ video {
     background-position: top 35% center;
   }
 
+  .md\:bg-\[top_25\%_center\]{
+    background-position: top 25% center;
+  }
+
   .md\:bg-no-repeat{
     background-repeat: no-repeat;
+  }
+
+  .md\:p-1{
+    padding: 0.25rem;
   }
 
   .md\:px-0{
