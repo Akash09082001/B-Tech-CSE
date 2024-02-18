@@ -1,17 +1,17 @@
 const boaData = [
     {
         id: 1,
-        name: "JAI DAGA",
-        position: "VP of Technology",
-        img:"assets/Board-of-advisor/JAI-DAGA.webp",
-        logo:"assets/Board-of-advisor/company-logo/JAI-DAGA-1.webp"
+        name: "SHAILENDRA SAWANT",
+        position: "CTO",
+        img:"assets/Board-of-advisor/SHAILENDRA-SAWANT.webp",
+        logo:"assets/Board-of-advisor/company-logo/SHAILENDRA-SAWANT-1.webp"
     },
     {
         id: 2,
-        name: "PRASHANTH KUMAR",
-        position: "Director IT",
-        img:"assets/Board-of-advisor/PRASHANTH-KUMAR.webp",
-        logo:"assets/Board-of-advisor/company-logo/PRASHANTH-KUMAR-1.webp"
+        name: "SUMON MAL",
+        position: "Director of Engineering",
+        img:"assets/Board-of-advisor/SUMON-MAL.webp",
+        logo:"assets/Board-of-advisor/company-logo/SUMON-MAL-1.webp"
     },
     {
         id: 3,
@@ -42,32 +42,32 @@ const boaData = [
         logo:"assets/Board-of-advisor/company-logo/VARUN-RAJ-1.webp"
     },
     {
-        id: 7,
-        name: "SUMON MAL",
-        position: "Director of Engineering",
-        img:"assets/Board-of-advisor/SUMON-MAL.webp",
-        logo:"assets/Board-of-advisor/company-logo/SUMON-MAL-1.webp"
+        id:7,
+        name: "MEHAMOOD MANSOORI",
+        position: "MD & CEO",
+        img:"assets/Board-of-advisor/MEHAMOOD-MANSOORI.webp",
+        logo:"assets/Board-of-advisor/company-logo/MEHAMOOD-MANSOORI-1.webp"
     },
     {
         id: 8,
-        name: "SHAILENDRA SAWANT",
+        name: "ABHIJIT PETKAR",
         position: "CTO",
-        img:"assets/Board-of-advisor/SHAILENDRA-SAWANT.webp",
-        logo:"assets/Board-of-advisor/company-logo/SHAILENDRA-SAWANT-1.webp"
+        img:"assets/Board-of-advisor/ABHIJIT-PETKAR.webp",
+        logo:"assets/Board-of-advisor/company-logo/ABHIJIT-PETKAR-1.webp"
     },
     {
         id: 9,
-        name: "ANKUSH GORAV",
-        position: "VP of Engineering",
-        img:"assets/Board-of-advisor/ANKUSH-GORAV.webp",
-        logo:"assets/Board-of-advisor/company-logo/ANKUSH-GORAV-1.webp"
-    },
-    {
-        id: 10,
         name: "AJAY MARU",
         position: "CTO",
         img:"assets/Board-of-advisor/AJAY-MARU.webp",
         logo:"assets/Board-of-advisor/company-logo/AJAY-MARU-1.webp"
+    },
+    {
+        id: 10,
+        name: "PRASHANTH KUMAR",
+        position: "Director IT",
+        img:"assets/Board-of-advisor/PRASHANTH-KUMAR.webp",
+        logo:"assets/Board-of-advisor/company-logo/PRASHANTH-KUMAR-1.webp"
     },
     {
         id: 11,
@@ -78,10 +78,10 @@ const boaData = [
     },
     {
         id: 12,
-        name: "ABHIJIT PETKAR",
-        position: "CTO",
-        img:"assets/Board-of-advisor/ABHIJIT-PETKAR.webp",
-        logo:"assets/Board-of-advisor/company-logo/ABHIJIT-PETKAR-1.webp"
+        name: "AMIT A. BADIYANI",
+        position: "Founder &Managing Director",
+        img:"assets/Board-of-advisor/AMIT-A.-BADIYANI.webp",
+        logo:"assets/Board-of-advisor/company-logo/AMIT-A.-BADIYANI-1.webp"
     },
     {
         id: 13,
@@ -92,45 +92,45 @@ const boaData = [
     },
     {
         id: 14,
-        name: "AMIT A. BADIYANI",
-        position: "Founder &Managing Director",
-        img:"assets/Board-of-advisor/AMIT-A.-BADIYANI.webp",
-        logo:"assets/Board-of-advisor/company-logo/AMIT-A.-BADIYANI-1.webp"
-    },
-    {
-        id: 15,
         name: "KESHAV KARUNAKAR",
         position: "Co Founder & VP Engineering",
         img:"assets/Board-of-advisor/KESHAV-KARUNAKAR.webp",
         logo:"assets/Board-of-advisor/company-logo/KESHAV-KARUNAKAR-1.webp"
     },
     {
-        id: 16,
-        name: "MEHAMOOD MANSOORI",
-        position: "MD & CEO",
-        img:"assets/Board-of-advisor/MEHAMOOD-MANSOORI.webp",
-        logo:"assets/Board-of-advisor/company-logo/MEHAMOOD-MANSOORI-1.webp"
+        id: 15,
+        name: "ANKUSH GORAV",
+        position: "VP of Engineering",
+        img:"assets/Board-of-advisor/ANKUSH-GORAV.webp",
+        logo:"assets/Board-of-advisor/company-logo/ANKUSH-GORAV-1.webp"
     },
     {
-        id: 17,
+        id: 16,
         name: "SUNDEEP MEHTA",
         position: "Sr Vice President",
         img:"assets/Board-of-advisor/SUNDEEP-MEHTA.webp",
         logo:"assets/Board-of-advisor/company-logo/SUNDEEP-MEHTA-1.webp"
     },
     {
-        id: 18,
+        id: 17,
         name: "MUKESH MARFATIA",
         position: "EVP Corporate Strategy",
         img:"assets/Board-of-advisor/MUKESH-MARFATIA.webp",
         logo:"assets/Board-of-advisor/company-logo/MUKESH-MARFATIA-1.webp"
     },
     {
-        id: 19,
+        id: 18,
         name: "DEVVRAT ARYA",
         position: "VP of Technology",
         img:"assets/Board-of-advisor/DEVVRAT-ARYA.webp",
         logo:"assets/Board-of-advisor/company-logo/DEVVRAT-ARYA-1.webp"
+    },
+    {
+        id: 19,
+        name: "JAI DAGA",
+        position: "VP of Technology",
+        img:"assets/Board-of-advisor/JAI-DAGA.webp",
+        logo:"assets/Board-of-advisor/company-logo/JAI-DAGA-1.webp"
     },
     
 ];

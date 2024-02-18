@@ -3130,6 +3130,18 @@ video {
     background-position: center;
   }
 
+  .md\:bg-\[top_20\%_center\]{
+    background-position: top 20% center;
+  }
+
+  .md\:bg-\[top_30\%_center\]{
+    background-position: top 30% center;
+  }
+
+  .md\:bg-\[top_35\%_center\]{
+    background-position: top 35% center;
+  }
+
   .md\:bg-no-repeat{
     background-repeat: no-repeat;
   }
