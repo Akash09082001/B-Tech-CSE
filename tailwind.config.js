@@ -91,6 +91,7 @@ module.exports = {
         "caveat": ["Caveat", "cursive"],
         "inter": ["Inter", "sans-serif"],
         'hm-sans': ['HM Sans Regular', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
