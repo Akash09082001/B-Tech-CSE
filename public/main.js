@@ -54,6 +54,8 @@ const imgModal = document.getElementById("imgModal");
 const showImg = document.getElementById("showImg");
 const modal = document.getElementById("modal");
 const modal1 = document.getElementById("modal1");
+const videoModal = document.getElementById("popup");
+
 
 function showImage(src) {
     imgModal.classList.remove('hidden');
@@ -69,6 +71,7 @@ document.addEventListener('keydown', (event) => {
         modal.style.display = "none";
         modal1.style.display = "none";
         imgModal.style.display = "none";
+        videoModal.style.display = "none";
     }
 });
 
@@ -95,31 +98,39 @@ updateButtonVisibility();
 window.addEventListener('scroll', updateButtonVisibility);
 
 function updateButtonVisibility() {
-  const isInsideHeroSection = isInHeroSection(floatBtn, heroSection);
+    const isInsideHeroSection = isInHeroSection(floatBtn, heroSection);
 
-  if (isInsideHeroSection) {
-    floatBtn.style.visibility = 'hidden';
-  } else {
-    floatBtn.style.visibility = 'visible';
-  }
+    if (isInsideHeroSection) {
+        floatBtn.style.visibility = 'hidden';
+    } else {
+        floatBtn.style.visibility = 'visible';
+    }
 }
 
 function isInHeroSection(element, heroSection) {
-  if (!heroSection) {
-    // If hero section doesn't exist, return false
-    return false;
-  }
+    if (!heroSection) {
+        // If hero section doesn't exist, return false
+        return false;
+    }
 
-  // Get the position of the button and hero section
-  const buttonRect = element.getBoundingClientRect();
-  const heroRect = heroSection.getBoundingClientRect();
+    // Get the position of the button and hero section
+    const buttonRect = element.getBoundingClientRect();
+    const heroRect = heroSection.getBoundingClientRect();
 
-  // Check if the button is inside the hero section
-  return (
-    buttonRect.top >= heroRect.top &&
-    buttonRect.bottom <= heroRect.bottom &&
-    buttonRect.left >= heroRect.left &&
-    buttonRect.right <= heroRect.right
-  );
+    // Check if the button is inside the hero section
+    return (
+        buttonRect.top >= heroRect.top &&
+        buttonRect.bottom <= heroRect.bottom &&
+        buttonRect.left >= heroRect.left &&
+        buttonRect.right <= heroRect.right
+    );
 }
 
+
+function openVideoModal() {
+    videoModal.style.display = "block";
+}
+
+function closeVideoModal() {
+    videoModal.style.display = "none";
+}

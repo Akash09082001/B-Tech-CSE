@@ -391,7 +391,6 @@
             </div>
         </section>
 
-
         <section id="Placement" class="flex w-full">
             <div class="flex flex-col w-full gap-8 md:gap-8 lg:gap-10 px-5 py-5 md:py-8 max-w-7xl mx-auto">
                 <div class="flex w-full">
@@ -449,9 +448,9 @@
                             </div>
                         </div>
                         <div class="flex w-full ">
-                            <div class="flex w-full max-w-lg mx-auto">
-                                <img src="assets/banner-img/graph2.webp" alt=""
-                                    class="flex w-full h-full object-contain">
+                            <div class="flex w-full max-w-md mx-auto items-center justify-center">
+                                <img src="assets/banner-img/graph-edu.webp" alt=""
+                                    class="flex w-full h-full object-contain object-center">
                             </div>
                         </div>
                     </div>
@@ -685,7 +684,7 @@
 
         <div id="tikker2" class="flex"></div>
 
-        <section id="Banner" class="flex w-full bg-brand-yellow">
+        <section id="Banner" class="flex w-full bg-brand-yellow bg-mac-banner bg-center bg-[length:auto_150px]">
             <div class="flex flex-col w-screen mx-auto gap-5 pt-5 md:pt-8 lg:pt-10 pb-2 md:pb-8 lg:pb-10 xl:pb-0">
                 <div class="flex flex-col w-full gap-2">
                     <div class="flex w-full h-20 md:h-32">
@@ -2296,14 +2295,44 @@
                             </strong>
                         </div>
                         <div class="flex w-full items-center justify-center">
-                            <button onclick="openModal1()" class="btn">
-                                Watch
+                            <button onclick="openVideoModal()" class="btn">
+                                Watch Video
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section
+            class="hidden fixed z-30 bg-black bg-opacity-50 top-0 left-0 w-full h-full mx-auto items-center justify-center"
+            id="popup">
+            <div class="flex relative items-center w-full h-full justify-center mx-auto " id="popup-content">
+                <div class="flex h-fit rounded-md bg-gray-100 border flex-col w-full max-w-2xl mx-auto">
+                    <div class="flex h-10 relative w-full items-center justify-center">
+                        <strong class="flex text-base items-center justify-center w-full">
+                            Fun At B Tech campus
+                        </strong>
+                        <button onclick="closeVideoModal()"
+                            class="close-btn inside-shadow flex absolute top-0 right-0 h-10 w-10 items-center justify-center text-3xl bg-white text-bold rounded-md ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-brand-red">
+                                <path fill-rule="evenodd"
+                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex w-full  rounded-md">
+                        <video id="myVideo" class="aspect-video flex h-fit w-full md:w-fit md:rounded-md" controls muted
+                            loop playsinline>
+                            <source src="assets/video/Engineering Edu Premiere.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section id="Admission process" class="flex w-full">
             <div class="flex flex-col w-full max-w-7xl mx-auto gap-5 px-5 md:gap-8 lg:gap-10 py-5 md:py-8 lg:py-10 ">

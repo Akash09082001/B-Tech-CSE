@@ -28,8 +28,8 @@ module.exports = {
     },
     colors: {
       "brand-red": "#A91D54",
-      "brand-yellow" : "#FED800",
-      "brand-lisa" : "#9333EA",
+      "brand-yellow": "#FED800",
+      "brand-lisa": "#9333EA",
       transparent: "transparent",
       current: "currentColor",
       black: colors.black,
@@ -54,7 +54,7 @@ module.exports = {
       rose: colors.rose,
     },
     extend: {
-      
+
       height: {
         13: "50px",
         200: "200px",
@@ -96,6 +96,7 @@ module.exports = {
         "hero-banner": "url('assets/banner-img/hero-banner.webp')",
         // "text": "url('assets/banner-img/text-bg.png')",
         "text": "url('assets/banner-img/text-bg1.jpg')",
+        "mac-banner": "url('assets/banner-img/mac-banner1.webp')",
         "linear-graph": "url('assets/banner-img/graph-3.webp')",
         "boa-banner": "url('assets/banner-img/boa-banner1.webp')",
         "lisa": "url('assets/banner-img/lisa image.webp')",
