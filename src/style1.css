@@ -148,6 +148,11 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 22%, rgba(62, 62, 62, 1) 47%, rgba(255, 255, 255, 0) 92%);
 }
 
+.box-gradient5 {
+    background: rgb(169, 29, 84);
+    background: linear-gradient(275deg, rgba(169, 29, 84, 1) 0%, rgba(169, 29, 84, 0.8786108193277311) 51%, rgba(0, 0, 0, 0) 100%);
+}
+
 .add-box::before {
     content: '';
 }
@@ -164,8 +169,14 @@
 
 .text-stroke {
     color: white;
-    -webkit-text-stroke: 1px #a91d53;
-    text-stroke: 1px #a91d53;
+    -webkit-text-stroke: 0.6px black;
+    text-stroke: 0.6px black;
+}
+
+.text-stroke1 {
+    color: black;
+    -webkit-text-stroke: 0.6px white;
+    text-stroke: 0.6px white;
 }
 
 .st-gradient {
@@ -178,4 +189,26 @@
     background: -webkit-radial-gradient(circle, rgba(169, 29, 84, 1) 0%, rgba(169, 29, 84, 1) 0%, rgba(255, 255, 255, 0) 100%);
     background: radial-gradient(circle, rgba(169, 29, 84, 1) 0%, rgba(169, 29, 84, 1) 0%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a91d54", endColorstr="#ffffff", GradientType=1);
+}
+
+.title-gradiant {
+    -webkit-text-stroke: 1px linear-gradient(180deg, rgba(0, 0, 0, 1) 32%, rgba(24, 24, 24, 1) 43%, rgba(71, 71, 71, 1) 58%, rgba(126, 126, 126, 1) 71%, rgba(255, 255, 255, 1) 100%);
+    text-stroke: 1px linear-gradient(180deg, rgba(0, 0, 0, 1) 32%, rgba(24, 24, 24, 1) 43%, rgba(71, 71, 71, 1) 58%, rgba(126, 126, 126, 1) 71%, rgba(255, 255, 255, 1) 100%);
+    -moz-text-stroke: 1px linear-gradient(180deg, rgba(0, 0, 0, 1) 32%, rgba(24, 24, 24, 1) 43%, rgba(71, 71, 71, 1) 58%, rgba(126, 126, 126, 1) 71%, rgba(255, 255, 255, 1) 100%);
+    -o-text-stroke: 1px linear-gradient(180deg, rgba(0, 0, 0, 1) 32%, rgba(24, 24, 24, 1) 43%, rgba(71, 71, 71, 1) 58%, rgba(126, 126, 126, 1) 71%, rgba(255, 255, 255, 1) 100%);
+    -ms-text-stroke: 1px linear-gradient(180deg, rgba(0, 0, 0, 1) 32%, rgba(24, 24, 24, 1) 43%, rgba(71, 71, 71, 1) 58%, rgba(126, 126, 126, 1) 71%, rgba(255, 255, 255, 1) 100%);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos-slide {
+    animation: 15s slide infinite linear;
 }

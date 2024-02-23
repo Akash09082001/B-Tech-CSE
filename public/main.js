@@ -56,14 +56,28 @@ const modal = document.getElementById("modal");
 const modal1 = document.getElementById("modal1");
 const videoModal = document.getElementById("popup");
 
+function showImage(imageSrc, title, content) {
+    document.getElementById('imgModal').classList.remove('hidden');
+    // Set the image source, title, and content
+    document.getElementById('showImg').src = imageSrc;
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalContent').textContent = content;
 
-function showImage(src) {
-    imgModal.classList.remove('hidden');
-    showImg.src = src;
+    // Show the image modal
 }
+
 function closeImage() {
-    imgModal.classList.add('hidden');
+    // Hide the image modal
+    document.getElementById('imgModal').classList.add('hidden');
 }
+
+// function showImage(imageSrc, title, content) {
+//     imgModal.classList.remove('hidden');
+//     showImg.src = src;
+// }
+// function closeImage() {
+//     imgModal.classList.add('hidden');
+// }
 
 
 document.addEventListener('keydown', (event) => {

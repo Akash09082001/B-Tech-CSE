@@ -1,23 +1,25 @@
-// Create separate instances for each scroll container
-createScrollEffect('scrollContainer2', 'imageContainer2', 0.7);
-
 function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
     const scrollContainer = document.getElementById(scrollContainerId);
     const imageContainer = document.getElementById(imageContainerId);
     const images = Array.from(imageContainer.querySelectorAll('img'));
 
-    images.forEach(image => imageContainer.appendChild(image.cloneNode(true)));
+    // Create a sequence of cloned images
+    const clonedImages = images.map(img => {
+        const clone = img.cloneNode(true);
+        imageContainer.appendChild(clone);
+        return clone;
+    });
 
     let scrollPosition = 0;
     let isPaused = false;
-    const totalWidth = images.reduce((width, img) => width + img.width, 0);
 
     function scrollImages() {
         if (!isPaused) {
             scrollPosition += scrollSpeed;
 
-            if (scrollPosition >= totalWidth) {
-                scrollPosition = 0; // Reset to zero when it exceeds total width
+            // Reset scroll position if it exceeds the total width of the sequence
+            if (scrollPosition >= images.reduce((width, img) => width + img.width, 0)) {
+                scrollPosition = 0;
             }
 
             imageContainer.style.transform = `translateX(-${scrollPosition}px)`;
@@ -28,3 +30,7 @@ function createScrollEffect(scrollContainerId, imageContainerId, scrollSpeed) {
 
     scrollImages(); // Start the animation loop for this specific container
 }
+
+// Create separate instances for each scroll container
+createScrollEffect('scrollContainer1', 'indsutryContainer1', .7);
+createScrollEffect('scrollContainer2', 'indsutryContainer2', .6);

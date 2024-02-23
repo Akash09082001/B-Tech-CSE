@@ -1,10 +1,17 @@
 const boaData = [
     {
-        id: 1,
-        name: "SHAILENDRA SAWANT",
-        position: "CTO",
-        img: "assets/Board-of-advisor/SHAILENDRA-SAWANT.webp",
-        logo: "assets/Board-of-advisor/company-logo/SHAILENDRA-SAWANT-1.webp"
+        id: 3,
+        name: "MEHAMOOD MANSOORI",
+        position: "MD & CEO",
+        img: "assets/Board-of-advisor/MEHAMOOD-MANSOORI.webp",
+        logo: "assets/Board-of-advisor/company-logo/MEHAMOOD-MANSOORI-1.webp"
+    },
+    {
+        id: 18,
+        name: "DEVVRAT ARYA",
+        position: "VP of Technology",
+        img: "assets/Board-of-advisor/DEVVRAT-ARYA.webp",
+        logo: "assets/Board-of-advisor/company-logo/DEVVRAT-ARYA-1.webp"
     },
     {
         id: 2,
@@ -14,12 +21,34 @@ const boaData = [
         logo: "assets/Board-of-advisor/company-logo/SUMON-MAL-1.webp"
     },
     {
-        id: 3,
-        name: "MEHAMOOD MANSOORI",
-        position: "MD & CEO",
-        img: "assets/Board-of-advisor/MEHAMOOD-MANSOORI.webp",
-        logo: "assets/Board-of-advisor/company-logo/MEHAMOOD-MANSOORI-1.webp"
+        id: 8,
+        name: "ABHIJIT PETKAR",
+        position: "CTO",
+        img: "assets/Board-of-advisor/ABHIJIT-PETKAR.webp",
+        logo: "assets/Board-of-advisor/company-logo/ABHIJIT-PETKAR-1.webp"
     },
+    {
+        id: 19,
+        name: "JAI DAGA",
+        position: "VP of Technology",
+        img: "assets/Board-of-advisor/JAI-DAGA.webp",
+        logo: "assets/Board-of-advisor/company-logo/JAI-DAGA-1.webp"
+    },
+    {
+        id: 10,
+        name: "PRASHANTH KUMAR",
+        position: "Director IT",
+        img: "assets/Board-of-advisor/PRASHANTH-KUMAR.webp",
+        logo: "assets/Board-of-advisor/company-logo/PRASHANTH-KUMAR-1.webp"
+    },
+    {
+        id: 1,
+        name: "SHAILENDRA SAWANT",
+        position: "CTO",
+        img: "assets/Board-of-advisor/SHAILENDRA-SAWANT.webp",
+        logo: "assets/Board-of-advisor/company-logo/SHAILENDRA-SAWANT-1.webp"
+    },
+
     {
         id: 4,
         name: "VISHAL DUBEY",
@@ -48,13 +77,7 @@ const boaData = [
         img: "assets/Board-of-advisor/VARUN-RAJ.webp",
         logo: "assets/Board-of-advisor/company-logo/VARUN-RAJ-1.webp"
     },
-    {
-        id: 8,
-        name: "ABHIJIT PETKAR",
-        position: "CTO",
-        img: "assets/Board-of-advisor/ABHIJIT-PETKAR.webp",
-        logo: "assets/Board-of-advisor/company-logo/ABHIJIT-PETKAR-1.webp"
-    },
+
     {
         id: 9,
         name: "AJAY MARU",
@@ -62,13 +85,7 @@ const boaData = [
         img: "assets/Board-of-advisor/AJAY-MARU.webp",
         logo: "assets/Board-of-advisor/company-logo/AJAY-MARU-1.webp"
     },
-    {
-        id: 10,
-        name: "PRASHANTH KUMAR",
-        position: "Director IT",
-        img: "assets/Board-of-advisor/PRASHANTH-KUMAR.webp",
-        logo: "assets/Board-of-advisor/company-logo/PRASHANTH-KUMAR-1.webp"
-    },
+
     {
         id: 11,
         name: "ASIM MALIK",
@@ -118,20 +135,8 @@ const boaData = [
         img: "assets/Board-of-advisor/MUKESH-MARFATIA.webp",
         logo: "assets/Board-of-advisor/company-logo/MUKESH-MARFATIA-1.webp"
     },
-    {
-        id: 18,
-        name: "DEVVRAT ARYA",
-        position: "VP of Technology",
-        img: "assets/Board-of-advisor/DEVVRAT-ARYA.webp",
-        logo: "assets/Board-of-advisor/company-logo/DEVVRAT-ARYA-1.webp"
-    },
-    {
-        id: 19,
-        name: "JAI DAGA",
-        position: "VP of Technology",
-        img: "assets/Board-of-advisor/JAI-DAGA.webp",
-        logo: "assets/Board-of-advisor/company-logo/JAI-DAGA-1.webp"
-    },
+
+
 
 ];
 
